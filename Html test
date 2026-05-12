@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ireland Driving Test - Somali Audio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #1e3c72; 
+            min-height: 100vh; 
+            color: #333;
+        }
+        .container { max-width: 600px; margin: 0 auto; padding: 10px; }
+
+        /* Login */
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .login-box h1 { color: #1e3c72; margin-bottom: 10px; font-size: 24px; }
+        .code-hint { 
+            background: #e3f2fd; 
+            padding: 10px; 
+            border-radius: 8px; 
+            margin: 15px 0; 
+            font-size: 14px; 
+            color: #1976d2; 
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:active { background: #764ba2; }
+        .error { color: red; margin-top: 10px; display: none; }
+
+        /* Home */
+        .home { display: none; text-align: center; padding: 20px 0; }
+        .home h1 { color: white; margin-bottom: 20px; }
+        .mode-btn {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+        .mode-btn h2 { color: #1e3c72; margin-bottom: 5px; }
+        .mode-btn p { color: #666; font-size: 14px; }
+
+        /* Quiz */
+        .quiz { display: none; }
+        .quiz-header {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .timer { color: #e74c3c; font-weight: bold; font-size: 20px; }
+        .q-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        .category {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .q-text { font-size: 18px; font-weight: bold; margin-bottom: 10px; color: #1e3c72; }
+        
+        /* Question Audio Section */
+        .question-audio-section {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .question-audio-btn {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: auto;
+            display: inline-block;
+        }
+        .question-audio-btn:active { background: #388e3c; }
+
+        /* Answer Option with Integrated Audio */
+        .option {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .option:active { background: #e3f2fd; }
+        .opt-letter {
+            background: #1e3c72;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .opt-text {
+            flex: 1;
+            font-size: 16px;
+        }
+        .opt-audio-btn {
+            background: #ff9800;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+        .opt-audio-btn:active { background: #f57c00; }
+        .correct { background: #c8e6c9 !important; }
+        .wrong { background: #ffcdd2 !important; }
+
+        .feedback {
+            display: none;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .feedback.show { display: block; }
+        .feedback.correct { background: #c8e6c9; color: #2e7d32; }
+        .feedback.wrong { background: #ffcdd2; color: #c62828; }
+
+        /* Results */
+        .results { display: none; text-align: center; }
+        .r-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .score-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+        .pass { background: #4caf50; }
+        .fail { background: #f44336; }
+
+        .hidden { display: none !important; }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        <!-- LOGIN -->
+        <div id="login" class="login-box">
+            <h1>🚗 Ireland Driving Test</h1>
+            <p style="color: #666; margin-bottom: 15px;">Somali Audio Learning</p>
+            <div class="code-hint">🔑 Access Code: <strong>Xarbi1234</strong></div>
+            <input type="text" id="codeInput" placeholder="Enter code here" autocomplete="off">
+            <button onclick="doLogin()">ENTER</button>
+            <p id="loginError" class="error">Wrong code. Use: Xarbi1234</p>
+        </div>
+
+        <!-- HOME -->
+        <div id="home" class="home">
+            <h1>Choose Mode</h1>
+            <div class="mode-btn" onclick="startQuiz('practice')">
+                <h2>📚 Practice Mode</h2>
+                <p>No timer. Learn at your own pace.</p>
+            </div>
+            <div class="mode-btn" onclick="startQuiz('test')">
+                <h2>⏱️ Test Mode</h2>
+                <p>2 min per question. 16/20 to pass.</p>
+            </div>
+        </div>
+
+        <!-- QUIZ -->
+        <div id="quiz" class="quiz">
+            <div class="quiz-header">
+                <span id="qNum">Q 1/20</span>
+                <span class="timer" id="timer">02:00</span>
+            </div>
+
+            <div class="q-card">
+                <span class="category" id="cat">Road Signs</span>
+                <div class="q-text" id="qText">Question here</div>
+                <div id="signImage" class="sign-image" style="display:none; margin: 15px auto; max-width: 200px;"></div>
+                
+                <!-- QUESTION AUDIO CONTROL -->
+                <div class="question-audio-section">
+                    <div style="font-size: 14px; color: #2e7d32; margin-bottom: 8px; font-weight: bold;">📢 Question Audio (Somali)</div>
+                    <button class="question-audio-btn" onclick="speakCurrentQuestion()">🔊 Play Question</button>
+                </div>
+
+                <!-- ANSWER OPTIONS WITH INTEGRATED AUDIO -->
+                <div id="options"></div>
+
+                <div id="feedback" class="feedback">
+                    <h3 id="fbTitle">Correct!</h3>
+                    <p id="fbText" style="margin: 10px 0;"></p>
+                    <!-- Explanation Audio - Manual Only -->
+                    <div style="background: #e3f2fd; border: 2px solid #1976d2; border-radius: 10px; padding: 12px; margin: 15px 0;">
+                        <div style="font-size: 14px; color: #1976d2; margin-bottom: 8px; font-weight: bold;">📝 Explanation Audio (Somali)</div>
+                        <button class="question-audio-btn" style="background: #1976d2;" onclick="speakExplanation()">🔊 Play Explanation</button>
+                    </div>
+                    <button onclick="nextQ()" style="margin-top: 15px;">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="results" class="results">
+            <div class="r-card">
+                <div class="score-circle" id="scoreCircle">0/20</div>
+                <h2 id="rTitle">Done!</h2>
+                <p id="rMsg"></p>
+            </div>
+            <button onclick="goHome()">🏠 Home</button>
+            <button onclick="location.reload()" style="margin-top: 10px;">🔄 Restart</button>
+        </div>
+    </div>
+
+    <script>
+        
+        // SVG Road Sign Images
+        const signImages = {
+            stop: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="20" width="160" height="160" fill="#dc3545" stroke="white" stroke-width="8"/>
+                <text x="100" y="115" font-family="Arial" font-size="40" font-weight="bold" fill="white" text-anchor="middle">STOP</text>
+            </svg>`,
+            yield: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="100,30 170,160 30,160" fill="#ffc107" stroke="#dc3545" stroke-width="8"/>
+                <text x="100" y="135" font-family="Arial" font-size="28" font-weight="bold" fill="black" text-anchor="middle">YIELD</text>
+            </svg>`,
+            noentry: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="#dc3545" stroke="white" stroke-width="8"/>
+                <rect x="40" y="85" width="120" height="30" fill="white"/>
+            </svg>`,
+            roundabout: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#007bff" stroke-width="12"/>
+                <path d="M140 60 L160 40 L170 70" fill="#007bff"/>
+                <path d="M60 140 L40 160 L70 170" fill="#007bff"/>
+                <path d="M140 140 L160 160 L130 170" fill="#007bff"/>
+                <path d="M60 60 L40 40 L70 30" fill="#007bff"/>
+            </svg>`,
+            speed50: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="white" stroke="#dc3545" stroke-width="8"/>
+                <text x="100" y="125" font-family="Arial" font-size="60" font-weight="bold" fill="black" text-anchor="middle">50</text>
+            </svg>`,
+            speed100: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="white" stroke="#dc3545" stroke-width="8"/>
+                <text x="100" y="125" font-family="Arial" font-size="50" font-weight="bold" fill="black" text-anchor="middle">100</text>
+            </svg>`,
+            speed120: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="white" stroke="#dc3545" stroke-width="8"/>
+                <text x="100" y="125" font-family="Arial" font-size="50" font-weight="bold" fill="black" text-anchor="middle">120</text>
+            </svg>`,
+            tire: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="#333" stroke="#666" stroke-width="4"/>
+                <circle cx="100" cy="100" r="50" fill="#555"/>
+                <circle cx="100" cy="100" r="30" fill="#777"/>
+                <text x="100" y="170" font-family="Arial" font-size="16" fill="white" text-anchor="middle">TREAD DEPTH</text>
+            </svg>`,
+            phone: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="70" y="30" width="60" height="100" fill="#333" rx="10"/>
+                <rect x="75" y="40" width="50" height="70" fill="#4a90e2"/>
+                <circle cx="100" cy="125" r="8" fill="#666"/>
+                <circle cx="100" cy="100" r="40" fill="none" stroke="#dc3545" stroke-width="5"/>
+                <line x1="70" y1="60" x2="130" y2="140" stroke="#dc3545" stroke-width="5"/>
+            </svg>`,
+            seatbelt: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M80 20 L80 180" stroke="#333" stroke-width="12"/>
+                <rect x="70" y="80" width="20" height="40" fill="#dc3545" rx="5"/>
+                <path d="M80 120 L120 180" stroke="#333" stroke-width="12"/>
+                <text x="100" y="40" font-family="Arial" font-size="16" fill="#dc3545" text-anchor="middle">FASTEN</text>
+            </svg>`,
+            school: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="50" y="60" width="100" height="80" fill="#ffc107" stroke="#333" stroke-width="3"/>
+                <path d="M40 60 L100 20 L160 60" fill="#dc3545"/>
+                <rect x="85" y="100" width="30" height="40" fill="#8B4513"/>
+                <circle cx="100" cy="85" r="15" fill="#4a90e2"/>
+                <text x="100" y="165" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">SCHOOL ZONE</text>
+            </svg>`,
+            alcohol: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M70 20 L70 100 Q70 140 100 140 Q130 140 130 100 L130 20" fill="#4a90e2" stroke="#333" stroke-width="3"/>
+                <rect x="60" y="140" width="80" height="20" fill="#333" rx="5"/>
+                <text x="100" y="180" font-family="Arial" font-size="14" fill="#dc3545" text-anchor="middle">0.02% MAX (NEW DRIVERS)</text>
+            </svg>`,
+            cyclist: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="140" r="25" fill="none" stroke="#333" stroke-width="4"/>
+                <circle cx="140" cy="140" r="25" fill="none" stroke="#333" stroke-width="4"/>
+                <path d="M60 140 L100 100 L140 140 M100 100 L100 80 L80 70" stroke="#333" stroke-width="4" fill="none"/>
+                <circle cx="80" cy="70" r="10" fill="#333"/>
+                <text x="100" y="180" font-family="Arial" font-size="14" fill="#dc3545" text-anchor="middle">1 METER MINIMUM</text>
+            </svg>`,
+            handbrake: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="80" y="20" width="40" height="100" fill="#333" rx="5"/>
+                <rect x="70" y="110" width="60" height="10" fill="#666" rx="5"/>
+                <text x="100" y="160" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">HANDBRAKE</text>
+            </svg>`,
+            fog: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="200" height="200" fill="#ccc"/>
+                <rect x="20" y="40" width="160" height="20" fill="#999" rx="10"/>
+                <rect x="20" y="80" width="160" height="20" fill="#999" rx="10"/>
+                <rect x="20" y="120" width="160" height="20" fill="#999" rx="10"/>
+                <text x="100" y="180" font-family="Arial" font-size="16" fill="#666" text-anchor="middle">FOG</text>
+            </svg>`,
+            distance: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="80" width="60" height="40" fill="#dc3545" rx="5"/>
+                <rect x="120" y="80" width="60" height="40" fill="#007bff" rx="5"/>
+                <path d="M80 100 L120 100" stroke="#333" stroke-width="3" stroke-dasharray="10,5"/>
+                <text x="100" y="70" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">2 SECONDS</text>
+            </svg>`,
+            wetroad: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="200" height="200" fill="#555"/>
+                <path d="M0 50 Q50 30 100 50 T200 50" stroke="#4a90e2" stroke-width="3" fill="none"/>
+                <path d="M0 100 Q50 80 100 100 T200 100" stroke="#4a90e2" stroke-width="3" fill="none"/>
+                <path d="M0 150 Q50 130 100 150 T200 150" stroke="#4a90e2" stroke-width="3" fill="none"/>
+                <text x="100" y="180" font-family="Arial" font-size="16" fill="white" text-anchor="middle">WET ROAD</text>
+            </svg>`,
+            warning: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="100,30 170,160 30,160" fill="#ffc107" stroke="#dc3545" stroke-width="8"/>
+                <text x="100" y="130" font-family="Arial" font-size="60" font-weight="bold" fill="black" text-anchor="middle">!</text>
+            </svg>`,
+            bluearrow: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="#007bff" stroke="white" stroke-width="4"/>
+                <path d="M100 40 L130 80 L110 80 L110 140 L90 140 L90 80 L70 80 Z" fill="white"/>
+            </svg>`,
+            junction: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M80 0 L80 80 L0 80" stroke="black" stroke-width="15" fill="none"/>
+                <path d="M120 0 L120 200" stroke="black" stroke-width="15" fill="none"/>
+                <path d="M80 120 L80 200" stroke="black" stroke-width="15" fill="none"/>
+                <path d="M120 0 L140 20 L100 20" fill="#dc3545"/>
+            </svg>`
+        };
+
+        // Questions data
+        const questions = [
+            {cat: "Road Signs", q: "What does this sign mean?", img: "stop", opts: ["Stop", "Yield", "No Entry", "Slow"], ans: 0, 
+             so: {q: "Waa maxay micnaha calaamadda beddelan ee guduudan?", opts: ["Jooji", "U oggolow", "Gelin ma jirto", "Tartiib"], exp: "Calaamaddan waxay tahay STOP. Waa inaad si buuxda u joojiso."}},
+            {cat: "Road Signs", q: "What does this sign mean?", img: "yield", opts: ["Stop", "Give way", "Danger", "No parking"], ans: 1,
+             so: {q: "Waa maxay micnaha saddex-xagalka guduudan?", opts: ["Jooji", "Si u oggolow", "Khatar", "Ma jirto parkin"], exp: "Saddex-xagalka guduudan waxay kuu sheegaysaa inaad dadka kale si u oggolowdo."}},
+            {cat: "Road Signs", q: "What does this sign mean?", img: "noentry", opts: ["Road closed", "No vehicles allowed", "One way", "Stop"], ans: 1,
+             so: {q: "Waa maxay micnaha 'No Entry'?", opts: ["Waddo xiran", "Gaariga lama oggola", "Hal dhinac", "Jooji"], exp: "Gaariga kuma soo gali karto waddadan."}},
+            {cat: "Rules", q: "What is the maximum speed limit in a built-up area?", img: "speed50", opts: ["30 km/h", "50 km/h", "60 km/h", "80 km/h"], ans: 1,
+             so: {q: "Xadka magaalada?", opts: ["30", "50", "60", "80"], exp: "Xadka magaalada waa 50 km/h."}},
+            {cat: "Rules", q: "What is the speed limit on a national primary road?", img: "speed100", opts: ["80 km/h", "100 km/h", "120 km/h", "140 km/h"], ans: 1,
+             so: {q: "Xadka waddada qaranka?", opts: ["80", "100", "120", "140"], exp: "Waddooyinka qaranka waa 100 km/h."}},
+            {cat: "Rules", q: "What is the maximum speed on a motorway?", img: "speed120", opts: ["100 km/h", "110 km/h", "120 km/h", "130 km/h"], ans: 2,
+             so: {q: "Xadka mootarada?", opts: ["100", "110", "120", "130"], exp: "Mootarada waa 120 km/h."}},
+            {cat: "Rules", q: "At a roundabout, who has right of way?", img: "roundabout", opts: ["Traffic on your left", "Traffic on your right", "Entering traffic", "Traffic already on roundabout"], ans: 3,
+             so: {q: "Kuma leh awoodda isbitaallada?", opts: ["Bidix", "Midig", "Soo galaya", "Jooga"], exp: "Gaariga jooga isbitaallada ayaa leh awoodda."}},
+            {cat: "Vehicle", q: "What is the minimum legal tire tread depth?", img: "tire", opts: ["1.0 mm", "1.6 mm", "2.0 mm", "3.0 mm"], ans: 1,
+             so: {q: "Qoto ugu yar ee tread?", opts: ["1.0mm", "1.6mm", "2.0mm", "3.0mm"], exp: "Qoto ugu yar waa 1.6 mm."}},
+            {cat: "Vehicle", q: "In wet conditions, how much should you increase stopping distance?", img: "wetroad", opts: ["Keep same", "Double", "Triple", "Half"], ans: 1,
+             so: {q: "Masaafada joojinta roobka?", opts: ["Isku mid", "Laba jibbaar", "Sadex", "Nus"], exp: "Roobku wuu laba jibbaariyaa masaafada joojinta."}},
+            {cat: "Vehicle", q: "When should you use fog lights?", img: "fog", opts: ["When raining", "When fog reduces visibility to less than 100m", "At night", "Always"], ans: 1,
+             so: {q: "Goorma iftiinka ceeryaamada?", opts: ["Roob", "Ceeryaam <100m", "Habeen", "Had iyo jeer"], exp: "Kaliya marka ceeryaamadu yareyso aragtida 100m."}},
+            {cat: "Risk", q: "What is the recommended safe following distance in dry conditions?", img: "distance", opts: ["1 second gap", "2 second gap", "4 second gap", "10 second gap"], ans: 1,
+             so: {q: "Masaafada ammaanka?", opts: ["1 ilbiriqsi", "2 ilbiriqsi", "4 ilbiriqsi", "10 ilbiriqsi"], exp: "2 ilbiriqsi waa masaafada ammaanka."}},
+            {cat: "Risk", q: "When is it legal to use a handheld mobile phone while driving?", img: "phone", opts: ["When in slow traffic", "When using hands-free only", "Never while driving", "When stopped at traffic lights"], ans: 2,
+             so: {q: "Telefoon marka la wado?", opts: ["OK haddii tartiib", "Handsfree", "Marnaba", "Iftiinka"], exp: "Telefoon gacanta waa sharci daran marka la wado."}},
+            {cat: "Safe", q: "What is the minimum safe passing distance for a cyclist?", img: "cyclist", opts: ["0.5 meters", "1.0 meter", "1.5 meters", "2.0 meters"], ans: 1,
+             so: {q: "Masaafada bisikilleyda?", opts: ["0.5m", "1.0m", "1.5m", "2.0m"], exp: "Ugu yaraan 1.0 mitir."}},
+            {cat: "Safe", q: "Who is responsible for ensuring children under 14 wear seatbelts?", img: "seatbelt", opts: ["The child", "The driver", "The parent only if present", "Nobody, it is optional"], ans: 1,
+             so: {q: "Kuma masuul ka ah seatbelt ilmaha?", opts: ["Ilmaha", "Wadaha", "Waalid", "Boolis"], exp: "Wadaha ayaa masuul ka ah."}},
+            {cat: "Safe", q: "What is the blood alcohol limit for a new driver (first 2 years)?", img: "alcohol", opts: ["0.02%", "0.05%", "0.08%", "0.10%"], ans: 0,
+             so: {q: "Xadka alkoolka wadaha cusub?", opts: ["0.02%", "0.05%", "0.08%", "0.10%"], exp: "Wadaha cusub: 0.02% kaliya."}},
+            {cat: "Safe", q: "What should you do when approaching a school zone?", img: "school", opts: ["Sound horn to alert children", "Maintain speed, children should watch", "Reduce speed and be prepared to stop", "Overtake any slow vehicles"], ans: 2,
+             so: {q: "Dugsiga marka la dhowaado?", opts: ["Degdegsi", "Buunsi", "Yaree + diyaar jooji", "Gudub"], exp: "Yaree xawaaraha oo diyaar u noqo inaad joojiso."}},
+            {cat: "Signs", q: "What does a blue circle with white arrow mean?", img: "bluearrow", opts: ["No turn allowed", "You must turn in direction shown", "Turn is optional", "Stop"], ans: 1,
+             so: {q: "Goobada buluug ah ee fallaadh?", opts: ["Ma leexo", "Waa in la leexdo", "Ikhtiyaar", "Jooji"], exp: "Waa inaad leexdaa xagga lagu tilmaamay."}},
+            {cat: "Signs", q: "What does a yellow diamond sign mean?", img: "warning", opts: ["Warning of hazard ahead", "Information", "Speed limit", "Stop"], ans: 0,
+             so: {q: "Calaamadda jaalaha huruudda ah?", opts: ["Digniin", "Xog", "Degdeg", "Jooji"], exp: "Calaamaddan waa digniin khatar ah."}},
+            {cat: "Vehicle", q: "What is the purpose of the handbrake?", img: "handbrake", opts: ["To stop quickly in emergency", "To hold vehicle stationary when parked", "To slow down gradually", "To replace foot brake"], ans: 1,
+             so: {q: "Ujeeddada handbrake?", opts: ["Degdeg jooji", "Haynta parkiga", "Yareynta", "Drifting"], exp: "Handbrake waa in gaariga la haysto marka la parkigaro."}},
+            {cat: "Rules", q: "At an unmarked junction, who has priority?", img: "junction", opts: ["Traffic from the right", "Traffic from the left", "The larger vehicle", "The faster vehicle"], ans: 0,
+             so: {q: "Isgoysyada aan calaamad lahayn?", opts: ["Midig mudnaan", "Bidix mudnaan", "Ugu weyn", "Ugu degdegsan"], exp: "Trafic xagga midigta ayaa leh mudnaanta."}}
+        ];
+
+        let mode = '';
+        let currentQ = 0;
+        let score = 0;
+        let timer = null;
+        let timeLeft = 120;
+        let answered = false;
+
+        function show(id) {
+            document.querySelectorAll('.container > div').forEach(d => d.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function doLogin() {
+            const code = document.getElementById('codeInput').value.trim();
+            if (code === 'Xarbi1234') {
+                show('home');
+            } else {
+                document.getElementById('loginError').style.display = 'block';
+            }
+        }
+
+        // Enter key support
+        document.getElementById('codeInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') doLogin();
+        });
+
+        function startQuiz(m) {
+            mode = m;
+            currentQ = 0;
+            score = 0;
+            show('quiz');
+            loadQ();
+        }
+
+        function loadQ() {
+            const q = questions[currentQ];
+            answered = false;
+
+            document.getElementById('qNum').textContent = 'Q ' + (currentQ + 1) + '/20';
+            document.getElementById('cat').textContent = q.cat;
+            document.getElementById('qText').textContent = q.q;
+
+            // Display image if exists
+            const imgContainer = document.getElementById('signImage');
+            if (q.img && signImages[q.img]) {
+                imgContainer.innerHTML = signImages[q.img];
+                imgContainer.style.display = 'block';
+            } else {
+                imgContainer.style.display = 'none';
+            }
+            
+            // Hide feedback section
+            document.getElementById('feedback').className = 'feedback';
+
+            // Timer
+            if (mode === 'test') {
+                timeLeft = 120;
+                document.getElementById('timer').style.display = 'inline';
+                startTimer();
+            } else {
+                document.getElementById('timer').style.display = 'none';
+            }
+
+            // Build answer options WITH integrated audio buttons - ONLY ONE SET
+            let html = '';
+            q.opts.forEach((opt, i) => {
+                html += '<div class="option" onclick="select(' + i + ')">';
+                html += '<div class="opt-letter">' + String.fromCharCode(65+i) + '</div>';
+                html += '<div class="opt-text">' + opt + '</div>';
+                html += '<button class="opt-audio-btn" onclick="speakOpt(' + i + ', event)">🔊</button>';
+                html += '</div>';
+            });
+            document.getElementById('options').innerHTML = html;
+
+            // NO AUTO AUDIO ANYWHERE
+            // NO DUPLICATE ANSWER SECTIONS
+        }
+
+        function startTimer() {
+            clearInterval(timer);
+            updateTimer();
+            timer = setInterval(function() {
+                timeLeft--;
+                updateTimer();
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    if (!answered) select(-1);
+                }
+            }, 1000);
+        }
+
+        function updateTimer() {
+            const m = Math.floor(timeLeft / 60);
+            const s = timeLeft % 60;
+            document.getElementById('timer').textContent = 
+                (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+        }
+
+        function select(idx) {
+            if (answered) return;
+            answered = true;
+            clearInterval(timer);
+
+            const q = questions[currentQ];
+            const correct = idx === q.ans;
+            if (correct) score++;
+
+            // Visual feedback
+            const opts = document.querySelectorAll('.option');
+            opts.forEach((opt, i) => {
+                if (i === q.ans) opt.classList.add('correct');
+                else if (i === idx && !correct) opt.classList.add('wrong');
+            });
+
+            // Show feedback section
+            const fb = document.getElementById('feedback');
+            fb.className = 'feedback show ' + (correct ? 'correct' : 'wrong');
+            document.getElementById('fbTitle').textContent = correct ? '✅ Correct!' : '❌ Wrong!';
+            document.getElementById('fbText').textContent = q.so.exp;
+
+            // NO AUTO AUDIO - User must click explanation button manually
+        }
+
+        function nextQ() {
+            currentQ++;
+            if (currentQ >= questions.length) {
+                showResults();
+            } else {
+                loadQ();
+            }
+        }
+
+        function showResults() {
+            show('results');
+            const pass = score >= 16;
+            document.getElementById('scoreCircle').textContent = score + '/20';
+            document.getElementById('scoreCircle').className = 'score-circle ' + (pass ? 'pass' : 'fail');
+            document.getElementById('rTitle').textContent = pass ? '🎉 PASSED!' : '❌ Failed';
+            document.getElementById('rMsg').textContent = pass ? 
+                'Great job! You scored ' + score + '/20 (80%+ needed)' : 
+                'You got ' + score + '/20. Need 16/20 to pass. Try again!';
+        }
+
+        function goHome() {
+            show('home');
+        }
+
+        // Audio functions - ALL MANUAL, ALL SEPARATE
+        function speak(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var u = new SpeechSynthesisUtterance(text);
+                u.lang = 'so-SO';
+                u.rate = 0.9;
+                window.speechSynthesis.speak(u);
+            } else {
+                alert('Audio not supported on this device');
+            }
+        }
+
+        // SEPARATE: Play only the question audio (Somali)
+        function speakCurrentQuestion() {
+            const q = questions[currentQ];
+            speak(q.so.q);
+        }
+
+        // SEPARATE: Play only one answer audio (Somali)
+        function speakOpt(idx, e) {
+            e.stopPropagation(); // Prevent triggering option selection
+            speak(questions[currentQ].so.opts[idx]);
+        }
+
+        // SEPARATE: Play only the explanation audio (Somali)
+        function speakExplanation() {
+            const q = questions[currentQ];
+            speak(q.so.exp);
+        }
+
+        // Init
+        show('login');
+    </script>
+</body>
+</html>
