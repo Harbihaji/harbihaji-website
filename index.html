@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,13 +6,14 @@
     <title>Ireland Driving Test - Somali Audio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: Arial, sans-serif; 
-            background: #1e3c72; 
-            min-height: 100vh; 
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e3c72;
+            min-height: 100dvh;
             color: #333;
+            overflow-x: hidden;
         }
-        .container { width: 100%; max-width: 700px; margin: 0 auto; padding: 15px; }
+        .container { width: 100%; max-width: 760px; margin: 0 auto; padding: 10px; }
 
         /* Screens */
         .screen { display: none; }
@@ -21,16 +22,16 @@
         /* Login */
         .login-box {
             background: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
-            margin-top: 50px;
+            margin-top: 25px;
             text-align: center;
         }
         .login-box h1 { color: #1e3c72; margin-bottom: 10px; font-size: 24px; }
         input {
             width: 100%;
-            padding: 15px;
-            font-size: 18px;
+            padding: 12px;
+            font-size: 16px;
             border: 2px solid #ddd;
             border-radius: 8px;
             margin: 10px 0;
@@ -38,8 +39,8 @@
         }
         button {
             width: 100%;
-            padding: 15px;
-            font-size: 18px;
+            padding: 12px;
+            font-size: 16px;
             background: #667eea;
             color: white;
             border: none;
@@ -51,48 +52,63 @@
         .error { color: red; margin-top: 10px; display: none; }
 
         /* Home */
-        .home { text-align: center; padding: 20px 0; }
-        .home h1 { color: white; margin-bottom: 20px; }
+        .home { text-align: center; padding: 18px 0; }
+        .home h1 { color: white; margin-bottom: 16px; }
         .mode-btn {
             background: white;
-            padding: 20px;
+            padding: 16px;
             border-radius: 15px;
-            margin: 15px 0;
+            margin: 12px 0;
             cursor: pointer;
         }
-        .mode-btn h2 { color: #1e3c72; margin-bottom: 5px; }
-        .mode-btn p { color: #666; font-size: 14px; }
+        .mode-btn h2 { color: #1e3c72; margin-bottom: 6px; font-size: 18px; }
+        .mode-btn p { color: #666; font-size: 13px; }
+
+        /* Category Select */
+        #categoryButtons { margin-bottom: 15px; }
+        .category-btn {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: white;
+            color: #1e3c72;
+            cursor: pointer;
+        }
+        .category-btn:hover { background: #eef3ff; }
 
         /* Quiz */
         .quiz-header {
             background: white;
-            padding: 15px;
+            padding: 10px;
             border-radius: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .back { font-size: 24px; cursor: pointer; padding: 5px; }
-        .timer { color: #e74c3c; font-weight: bold; font-size: 20px; }
+        .timer { color: #e74c3c; font-weight: bold; font-size: 18px; }
         .q-card {
             background: white;
-            padding: 16px;
+            padding: 12px;
             border-radius: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .cat {
             background: #e3f2fd;
             color: #1976d2;
-            padding: 6px 16px;
+            padding: 6px 14px;
             border-radius: 20px;
             font-size: 12px;
             display: inline-block;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-weight: bold;
         }
-        .q-text { font-size: 20px; line-height: 1.5; font-weight: bold; margin-bottom: 12px; color: #1e3c72; }
-        .q-image { width: 100%; max-height: 250px; object-fit: contain; border-radius: 12px; display: none; margin: 15px 0; }
+        .q-text { font-size: 18px; line-height: 1.35; font-weight: bold; margin-bottom: 8px; color: #1e3c72; }
+        .q-image { width: 100%; max-height: 240px; object-fit: contain; border-radius: 12px; display: none; margin: 12px 0; }
         .audio-btn {
             background: #4caf50;
             color: white;
@@ -109,15 +125,19 @@
         }
         .option {
             background: #f5f5f5;
-            padding: 15px;
+            padding: 11px;
             border-radius: 10px;
-            margin: 10px 0;
+            margin: 7px 0;
             cursor: pointer;
             display: flex;
             align-items: center;
-            min-height: 60px;
+            min-height: 50px;
         }
         .option:hover { background: #e3f2fd; }
+        .selected {
+            background: #dce6ff !important;
+            border: 2px solid #667eea;
+        }
         .opt-letter {
             background: #1e3c72;
             color: white;
@@ -146,14 +166,18 @@
 
         .feedback {
             display: none;
-            padding: 15px;
+            padding: 12px;
             border-radius: 10px;
-            margin-top: 15px;
+            margin-top: 12px;
             text-align: center;
         }
         .feedback.show { display: block; }
         .feedback.correct { background: #c8e6c9; color: #2e7d32; }
         .feedback.wrong { background: #ffcdd2; color: #c62828; }
+        .feedback p { font-size: 15px; line-height: 1.4; margin-top: 8px; }
+
+        #quizButtons { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+        #quizButtons button { width: 100%; }
 
         /* Results */
         .results { text-align: center; }
@@ -161,7 +185,7 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin: 0 auto 18px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -180,7 +204,7 @@
             text-align: left;
         }
         .cat-name { font-weight: bold; color: #1e3c72; margin-bottom: 5px; }
-        .cat-stats { display: flex; gap: 15px; font-size: 14px; }
+        .cat-stats { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
 
         .watermark {
             position: fixed;
@@ -213,20 +237,27 @@
         <!-- HOME -->
         <div id="home" class="screen">
             <h1 style="color: white; text-align: center; margin-bottom: 20px;">Choose Mode</h1>
-            <div class="mode-btn" onclick="startQuiz('practice')">
+            <div class="mode-btn" onclick="enterPracticeMode()">
                 <h2>Practice Mode</h2>
-                <p>No timer. Learn at your own pace.</p>
+                <p>No timer. Choose a category first.</p>
             </div>
             <div class="mode-btn" onclick="startQuiz('test')">
                 <h2>Test Mode</h2>
-                <p>10 questions. Results at the end.</p>
+                <p>10 mixed questions. Finish to view results.</p>
             </div>
+        </div>
+
+        <!-- CATEGORY SELECT -->
+        <div id="categorySelect" class="screen">
+            <h1 style="color:white; text-align:center; margin-bottom:15px;">Choose Category</h1>
+            <div id="categoryButtons"></div>
+            <button onclick="goHome()">Back Home</button>
         </div>
 
         <!-- QUIZ -->
         <div id="quiz" class="screen">
             <div class="quiz-header">
-                    <span class="back" onclick="goHome()">&#8592;</span>
+                <span class="back" onclick="goHome()">&#8592;</span>
                 <span id="qNum">Q 1/10</span>
                 <span class="timer" id="timer">01:00</span>
             </div>
@@ -234,14 +265,17 @@
                 <span class="cat" id="cat">Category</span>
                 <div class="q-text" id="qText">Question</div>
                 <img id="qImage" class="q-image" src="" alt="Question image">
-                <div style="text-align: center; margin: 15px 0;">
+                <div style="text-align: center; margin: 12px 0;">
                     <button class="audio-btn" onclick="playQuestion()">Question Audio</button>
                 </div>
                 <div id="options"></div>
                 <div id="feedback" class="feedback">
                     <h3 id="fbTitle">Correct!</h3>
                     <p id="fbText"></p>
-                    <button onclick="nextQ()">Next</button>
+                    <div id="quizButtons">
+                        <button id="nextBtn" onclick="nextQ()">Next</button>
+                        <button id="finishBtn" onclick="finishTest()" style="display:none;">Finish Test</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -281,7 +315,7 @@
                 ],
                 answer: 1,
                 image: "",
-                explanation: "Drivers should check tires, oil levels and lights before a long journey to ensure the vehicle is safe."
+                explanation: "Darawalku waa inuu hubiyaa taayirrada, saliidda iyo nalalka ka hor safar dheer si uu u xaqiijiyo in gaarigu ammaan yahay."
             },
             {
                 id: 22,
@@ -295,7 +329,7 @@
                 ],
                 answer: 1,
                 image: "",
-                explanation: "Hydroplaning happens when tires lose contact with the road due to water."
+                explanation: "Hydroplaning wuxuu dhaca marka taayirradu ka go'aan wadada sababtuna tahay biyaha, taasoo yareysa xajmiga."
             },
             {
                 id: 23,
@@ -309,7 +343,7 @@
                 ],
                 answer: 1,
                 image: "",
-                explanation: "A continuous white line usually means overtaking is not allowed."
+                explanation: "Xariiqda caddaanka ah ee joogtada ah badanaa waxay ka dhigan tahay in/wax la dhaafi karin."
             },
             {
                 id: 24,
@@ -323,7 +357,7 @@
                 ],
                 answer: 1,
                 image: "",
-                explanation: "Drivers should only enter a yellow box when their exit is clear."
+                explanation: "Waa inaad gelisaa sanduuqa huruudka kaliya marka ka bixitaankaaga uu nadiif yahay si aad u ilaaliso gaadiidka kale."
             },
             {
                 id: 25,
@@ -337,7 +371,7 @@
                 ],
                 answer: 2,
                 image: "",
-                explanation: "Following too closely increases the risk of collision if traffic stops suddenly."
+                explanation: "Raacitaanka gaari kale si dhow wuxuu kordhiyaa khatarta shil haddii gaadhigu si kedis ah u istaago."
             },
             {
                 id: 26,
@@ -351,7 +385,7 @@
                 ],
                 answer: 2,
                 image: "",
-                explanation: "Drivers should stop and rest when tired because fatigue affects concentration."
+                explanation: "Haddii aad daal dareento, waa inaad joojisaa oo nasataa maxaa yeelay daalka wuxuu saameeyaa feejignaantaada."
             },
             {
                 id: 27,
@@ -365,7 +399,7 @@
                 ],
                 answer: 1,
                 image: "",
-                explanation: "Checking mirrors and blind spots helps avoid collisions when changing lanes."
+                explanation: "Hubinta muraayadaha iyo meelaha foolka ka xiran waxay ka hortagtaa shilal marka aad lane beddelayso."
             },
             {
                 id: 28,
@@ -379,7 +413,7 @@
                 ],
                 answer: 2,
                 image: "",
-                explanation: "Drivers should slow down and prepare to stop near pedestrians and crossings."
+                explanation: "Darawalladu waa inay hoos u dhacaan oo diyaar u noqdaan inay istaagaan marka ay u dhow yihiin lugeeyayaasha."
             },
             {
                 id: 29,
@@ -393,7 +427,7 @@
                 ],
                 answer: 1,
                 image: "RS001-stop.webp",
-                explanation: "A red octagon is the international road sign shape for STOP."
+                explanation: "Astaanta octagon cas waa calaamad caalami ah oo muujinaysa in darawalku istaago."
             },
             {
                 id: 30,
@@ -407,12 +441,18 @@
                 ],
                 answer: 1,
                 image: "",
-                explanation: "Triangular signs are warning signs used to alert drivers to hazards ahead."
+                explanation: "Calaamadaha saddexagalka ah waxay ka digayaan khataro horay u jira ama xaalado gaar ah oo waddada ah."
             }
         ];
 
-        let mode = '', currentQ = 0, score = 0, timer = null, timeLeft = 60, answered = false;
+        let mode = '';
+        let currentQ = 0;
+        let timer = null;
+        let timeLeft = 60;
+        let answered = false;
         let categoryScores = {};
+        let activeQuizQuestions = [];
+        let userAnswers = [];
         let currentAudio = null;
 
         function show(id) {
@@ -423,7 +463,6 @@
         function doLogin() {
             const username = document.getElementById('usernameInput').value.trim();
             const password = document.getElementById('passwordInput').value;
-
             if (username === 'fynah' && password === 'Fynah2026!') {
                 show('home');
             } else {
@@ -437,24 +476,47 @@
             });
         });
 
-        function shuffleQuestions() {
-            questions.sort(() => Math.random() - 0.5);
+        function enterPracticeMode() {
+            mode = 'practice';
+            renderCategoryButtons();
+            show('categorySelect');
+        }
+
+        function renderCategoryButtons() {
+            const categoryButtons = document.getElementById('categoryButtons');
+            categoryButtons.innerHTML = '';
+            for (const key in categories) {
+                const button = document.createElement('button');
+                button.className = 'category-btn';
+                button.textContent = categories[key];
+                button.onclick = function() { choosePracticeCategory(key); };
+                categoryButtons.appendChild(button);
+            }
+        }
+
+        function choosePracticeCategory(categoryKey) {
+            activeQuizQuestions = questions.filter(q => q.category === categoryKey);
+            userAnswers = new Array(activeQuizQuestions.length).fill(null);
+            currentQ = 0;
+            categoryScores = {};
+            show('quiz');
+            loadQ();
         }
 
         function startQuiz(m) {
             mode = m;
             currentQ = 0;
-            score = 0;
             categoryScores = {};
-            shuffleQuestions();
+            activeQuizQuestions = [...questions].sort(() => Math.random() - 0.5);
+            userAnswers = new Array(activeQuizQuestions.length).fill(null);
             show('quiz');
             loadQ();
         }
 
         function loadQ() {
-            const q = questions[currentQ];
+            const q = activeQuizQuestions[currentQ];
             answered = false;
-            document.getElementById('qNum').textContent = 'Q ' + (currentQ + 1) + '/' + questions.length;
+            document.getElementById('qNum').textContent = 'Q ' + (currentQ + 1) + '/' + activeQuizQuestions.length;
             document.getElementById('cat').textContent = categories[q.category] || q.category;
             document.getElementById('qText').textContent = q.question;
             const qImage = document.getElementById('qImage');
@@ -465,7 +527,12 @@
                 qImage.src = '';
                 qImage.style.display = 'none';
             }
-            document.getElementById('feedback').className = 'feedback';
+
+            const fb = document.getElementById('feedback');
+            fb.className = 'feedback';
+            document.getElementById('fbTitle').style.display = 'none';
+            document.getElementById('fbText').style.display = 'none';
+            document.getElementById('fbText').innerHTML = '';
 
             if (mode === 'test') {
                 timeLeft = 60;
@@ -478,13 +545,15 @@
 
             let html = '';
             q.options.forEach((opt, i) => {
-                html += '<div class="option" onclick="select(' + i + ')">';
-                html += '<div class="opt-letter">' + String.fromCharCode(65+i) + '</div>';
+                html += '<div class="option" onclick="selectAnswer(' + i + ')">';
+                html += '<div class="opt-letter">' + String.fromCharCode(65 + i) + '</div>';
                 html += '<div class="opt-text">' + opt + '</div>';
                 html += '<button class="opt-audio" onclick="event.stopPropagation(); playOpt(' + i + ')">&#128266;</button>';
                 html += '</div>';
             });
             document.getElementById('options').innerHTML = html;
+            updateOptionSelection();
+            updateActionButtons();
         }
 
         function startTimer() {
@@ -493,7 +562,9 @@
             timer = setInterval(function() {
                 timeLeft--;
                 updateTimer();
-                if (timeLeft <= 0) { clearInterval(timer); if (!answered) select(-1); }
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                }
             }, 1000);
         }
 
@@ -502,52 +573,124 @@
             document.getElementById('timer').textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
         }
 
-        function select(idx) {
-            if (answered) return;
+        function selectAnswer(idx) {
+            const q = activeQuizQuestions[currentQ];
+            userAnswers[currentQ] = idx;
             answered = true;
-            clearInterval(timer);
-            const q = questions[currentQ];
-            const correct = idx === q.answer;
-            if (correct) score++;
+            if (mode === 'practice') {
+                clearInterval(timer);
+                const correct = idx === q.answer;
+                updateOptionSelection();
+                showPracticeFeedback(correct, q);
+            } else {
+                updateOptionSelection();
+                updateActionButtons();
+            }
+        }
 
-            if (!categoryScores[q.category]) categoryScores[q.category] = { correct: 0, total: 0 };
-            categoryScores[q.category].total++;
-            if (correct) categoryScores[q.category].correct++;
-
+        function updateOptionSelection() {
+            const selectedIndex = userAnswers[currentQ];
+            const q = activeQuizQuestions[currentQ];
             document.querySelectorAll('.option').forEach((opt, i) => {
-                opt.style.pointerEvents = 'none';
-                if (i === q.answer) opt.classList.add('correct');
-                else if (i === idx && !correct) opt.classList.add('wrong');
+                opt.classList.remove('selected', 'correct', 'wrong');
+                if (selectedIndex === i) {
+                    opt.classList.add('selected');
+                }
+                if (mode === 'practice' && selectedIndex !== null) {
+                    if (i === q.answer) {
+                        opt.classList.add('correct');
+                    } else if (i === selectedIndex) {
+                        opt.classList.add('wrong');
+                    }
+                }
             });
+        }
 
+        function showPracticeFeedback(correct, q) {
             const fb = document.getElementById('feedback');
             fb.className = 'feedback show ' + (correct ? 'correct' : 'wrong');
-            document.getElementById('fbTitle').textContent = correct ? 'Correct!' : 'Wrong!';
-            document.getElementById('fbText').innerHTML =
-                '<strong>Correct Answer:</strong> ' +
-                q.options[q.answer] +
-                '<br><br>' +
-                q.explanation;
+            const title = document.getElementById('fbTitle');
+            const text = document.getElementById('fbText');
+            title.style.display = 'block';
+            text.style.display = 'block';
+            title.textContent = correct ? 'Correct!' : 'Wrong!';
+            text.innerHTML = '<strong>Correct Answer:</strong> ' + q.options[q.answer] + '<br><br>' + q.explanation;
+            updateActionButtons();
+        }
+
+        function updateActionButtons() {
+            const feedback = document.getElementById('feedback');
+            const nextBtn = document.getElementById('nextBtn');
+            const finishBtn = document.getElementById('finishBtn');
+            nextBtn.style.display = 'none';
+            finishBtn.style.display = 'none';
+
+            if (mode === 'practice') {
+                if (answered) {
+                    feedback.className = feedback.className.includes('show') ? feedback.className : feedback.className + ' show';
+                    nextBtn.style.display = 'inline-block';
+                } else {
+                    feedback.className = 'feedback';
+                }
+            } else {
+                document.getElementById('fbTitle').style.display = 'none';
+                document.getElementById('fbText').style.display = 'none';
+                if (userAnswers[currentQ] !== null) {
+                    feedback.className = 'feedback show';
+                    if (currentQ === activeQuizQuestions.length - 1) {
+                        finishBtn.style.display = 'inline-block';
+                    } else {
+                        nextBtn.style.display = 'inline-block';
+                    }
+                } else {
+                    feedback.className = 'feedback';
+                }
+            }
         }
 
         function nextQ() {
+            if (mode === 'practice' && !answered) return;
             currentQ++;
-            if (currentQ >= questions.length) showResults();
-            else loadQ();
+            if (currentQ >= activeQuizQuestions.length) {
+                showResults();
+                return;
+            }
+            answered = false;
+            loadQ();
+        }
+
+        function finishTest() {
+            showResults();
         }
 
         function showResults() {
             show('results');
-            const pass = score >= 8;
-            const wrong = questions.length - score;
-            document.getElementById('scoreCircle').textContent = score + '/' + questions.length;
+            clearInterval(timer);
+            const total = activeQuizQuestions.length;
+            const score = activeQuizQuestions.reduce((sum, q, index) => {
+                return sum + (userAnswers[index] === q.answer ? 1 : 0);
+            }, 0);
+            const pass = score >= Math.ceil(total * 0.8);
+            const wrong = total - score;
+            document.getElementById('scoreCircle').textContent = score + '/' + total;
             document.getElementById('scoreCircle').className = 'score-circle ' + (pass ? 'pass' : 'fail');
             document.getElementById('rTitle').textContent = pass ? 'PASSED 🎉' : 'FAILED ❌';
-            document.getElementById('rMsg').textContent = 'Correct: ' + score + ' | Wrong: ' + wrong + ' | Total: ' + questions.length;
+            document.getElementById('rMsg').textContent = 'Correct: ' + score + ' | Wrong: ' + wrong + ' | Total: ' + total;
+
+            const breakdown = {};
+            activeQuizQuestions.forEach((q, index) => {
+                if (!breakdown[q.category]) {
+                    breakdown[q.category] = { correct: 0, total: 0 };
+                }
+                breakdown[q.category].total++;
+                if (userAnswers[index] === q.answer) {
+                    breakdown[q.category].correct++;
+                }
+            });
 
             let catHtml = '<h3 style="margin-bottom: 15px; color: #1e3c72;">Category Breakdown</h3>';
-            for (let cat in categoryScores) {
-                const cs = categoryScores[cat];
+            for (const cat in breakdown) {
+                const cs = breakdown[cat];
                 const w = cs.total - cs.correct;
                 catHtml += '<div class="cat-result">';
                 catHtml += '<div class="cat-name">' + (categories[cat] || cat) + '</div>';
@@ -569,7 +712,6 @@
             show('home');
         }
 
-        // ============ MP3 AUDIO (FILES IN ROOT FOLDER) ============
         function playAudio(src) {
             if (currentAudio) {
                 currentAudio.pause();
@@ -581,19 +723,16 @@
             });
         }
 
-        // Play question audio - looks for file in ROOT folder
         function playQuestion() {
-            const q = questions[currentQ];
+            const q = activeQuizQuestions[currentQ];
             playAudio('q' + q.id + '_question.mp3');
         }
 
-        // Play option audio - looks for file in ROOT folder
         function playOpt(idx) {
-            const q = questions[currentQ];
+            const q = activeQuizQuestions[currentQ];
             playAudio('q' + q.id + '_opt' + idx + '.mp3');
         }
 
-        // Init
         show('login');
     </script>
 </body>
