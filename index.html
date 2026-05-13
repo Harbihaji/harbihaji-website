@@ -12,7 +12,7 @@
             min-height: 100vh; 
             color: #333;
         }
-        .container { max-width: 600px; margin: 0 auto; padding: 10px; }
+        .container { width: 100%; max-width: 700px; margin: 0 auto; padding: 15px; }
 
         /* Screens */
         .screen { display: none; }
@@ -27,14 +27,6 @@
             text-align: center;
         }
         .login-box h1 { color: #1e3c72; margin-bottom: 10px; font-size: 24px; }
-        .code-hint { 
-            background: #e3f2fd; 
-            padding: 10px; 
-            border-radius: 8px; 
-            margin: 15px 0; 
-            font-size: 14px; 
-            color: #1976d2; 
-        }
         input {
             width: 100%;
             padding: 15px;
@@ -85,21 +77,22 @@
         .timer { color: #e74c3c; font-weight: bold; font-size: 20px; }
         .q-card {
             background: white;
-            padding: 20px;
+            padding: 16px;
             border-radius: 15px;
             margin-bottom: 15px;
         }
         .cat {
             background: #e3f2fd;
             color: #1976d2;
-            padding: 5px 15px;
+            padding: 6px 16px;
             border-radius: 20px;
             font-size: 12px;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-weight: bold;
         }
-        .q-text { font-size: 18px; font-weight: bold; margin-bottom: 10px; color: #1e3c72; }
+        .q-text { font-size: 20px; line-height: 1.5; font-weight: bold; margin-bottom: 12px; color: #1e3c72; }
+        .q-image { width: 100%; max-height: 250px; object-fit: contain; border-radius: 12px; display: none; margin: 15px 0; }
         .audio-btn {
             background: #4caf50;
             color: white;
@@ -110,6 +103,10 @@
             font-size: 14px;
             margin: 5px;
         }
+        .audio-btn,
+        .opt-audio {
+            width: auto;
+        }
         .option {
             background: #f5f5f5;
             padding: 15px;
@@ -118,6 +115,7 @@
             cursor: pointer;
             display: flex;
             align-items: center;
+            min-height: 60px;
         }
         .option:hover { background: #e3f2fd; }
         .opt-letter {
@@ -205,10 +203,10 @@
             <div class="login-box">
                 <h1>Ireland Driving Test</h1>
                 <p style="color: #666; margin-bottom: 15px;">Somali Audio Learning</p>
-                <div class="code-hint">Access Code: <strong>Xarbi1234</strong></div>
-                <input type="text" id="codeInput" placeholder="Enter code" autocomplete="off">
+                <input type="text" id="usernameInput" placeholder="Username" autocomplete="off">
+                <input type="password" id="passwordInput" placeholder="Password" autocomplete="off">
                 <button onclick="doLogin()">ENTER</button>
-                <p id="loginError" class="error">Wrong code</p>
+                <p id="loginError" class="error">Invalid username or password</p>
             </div>
         </div>
 
@@ -221,20 +219,21 @@
             </div>
             <div class="mode-btn" onclick="startQuiz('test')">
                 <h2>Test Mode</h2>
-                <p>20 questions. Results at the end.</p>
+                <p>10 questions. Results at the end.</p>
             </div>
         </div>
 
         <!-- QUIZ -->
         <div id="quiz" class="screen">
             <div class="quiz-header">
-                <span class="back" onclick="goHome()">&#8592;</span>
-                <span id="qNum">Q 1/20</span>
+                    <span class="back" onclick="goHome()">&#8592;</span>
+                <span id="qNum">Q 1/10</span>
                 <span class="timer" id="timer">01:00</span>
             </div>
             <div class="q-card">
                 <span class="cat" id="cat">Category</span>
                 <div class="q-text" id="qText">Question</div>
+                <img id="qImage" class="q-image" src="" alt="Question image">
                 <div style="text-align: center; margin: 15px 0;">
                     <button class="audio-btn" onclick="playQuestion()">Question Audio</button>
                 </div>
@@ -242,8 +241,6 @@
                 <div id="feedback" class="feedback">
                     <h3 id="fbTitle">Correct!</h3>
                     <p id="fbText"></p>
-                    <button class="audio-btn" style="background: #1976d2;" onclick="playExplanation()">Explanation</button>
-                    <br><br>
                     <button onclick="nextQ()">Next</button>
                 </div>
             </div>
@@ -252,7 +249,7 @@
         <!-- RESULTS -->
         <div id="results" class="screen">
             <div class="q-card">
-                <div class="score-circle" id="scoreCircle">0/20</div>
+                <div class="score-circle" id="scoreCircle">0/10</div>
                 <h2 id="rTitle">Done!</h2>
                 <p id="rMsg"></p>
                 <div id="categoryResults" style="margin-top: 20px;"></div>
@@ -263,28 +260,155 @@
     </div>
 
     <script>
-        // Questions data
+        const categories = {
+            CAT01: "Control of Vehicle",
+            CAT02: "Rules of the Road",
+            CAT03: "Managing Risk",
+            CAT04: "Safe and Social Responsible Driving",
+            CAT05: "Technical Matters"
+        };
+
         const questions = [
-            {id: 1, cat: "Control of Vehicle", q: "What is the minimum legal tire tread depth?", opts: ["1.0 mm", "1.6 mm", "2.0 mm", "3.0 mm"], ans: 1},
-            {id: 2, cat: "Control of Vehicle", q: "In wet conditions, stopping distance should be?", opts: ["Same", "Double", "Triple", "Half"], ans: 1},
-            {id: 3, cat: "Control of Vehicle", q: "When should you use fog lights?", opts: ["When raining", "Fog <100m visibility", "At night", "Always"], ans: 1},
-            {id: 4, cat: "Control of Vehicle", q: "What is the purpose of the handbrake?", opts: ["Emergency stop", "Hold when parked", "Slow down", "Replace foot brake"], ans: 1},
-            {id: 5, cat: "Legal Matters / Rules of the Road", q: "Max speed in built-up area?", opts: ["30 km/h", "50 km/h", "60 km/h", "80 km/h"], ans: 1},
-            {id: 6, cat: "Legal Matters / Rules of the Road", q: "Speed limit on national road?", opts: ["80 km/h", "100 km/h", "120 km/h", "140 km/h"], ans: 1},
-            {id: 7, cat: "Legal Matters / Rules of the Road", q: "Max speed on motorway?", opts: ["100 km/h", "110 km/h", "120 km/h", "130 km/h"], ans: 2},
-            {id: 8, cat: "Legal Matters / Rules of the Road", q: "At unmarked junction, who has priority?", opts: ["Traffic from right", "Traffic from left", "Larger vehicle", "Faster vehicle"], ans: 0},
-            {id: 9, cat: "Managing Risk", q: "Safe following distance in dry conditions?", opts: ["1 sec", "2 sec", "4 sec", "10 sec"], ans: 1},
-            {id: 10, cat: "Managing Risk", q: "Handheld mobile phone while driving?", opts: ["OK if slow", "Hands-free only", "Never", "At lights"], ans: 2},
-            {id: 11, cat: "Managing Risk", q: "What does yellow diamond sign mean?", opts: ["Warning", "Info", "Speed limit", "Stop"], ans: 0},
-            {id: 12, cat: "Managing Risk", q: "What does this sign mean?", opts: ["Stop", "Give way", "No parking", "School"], ans: 1},
-            {id: 13, cat: "Safe and Social Responsible Driving", q: "Passing cyclist distance?", opts: ["0.5m", "1.0m", "1.5m", "2.0m"], ans: 1},
-            {id: 14, cat: "Safe and Social Responsible Driving", q: "Who ensures kids wear seatbelts?", opts: ["Child", "Driver", "Parent", "Police"], ans: 1},
-            {id: 15, cat: "Safe and Social Responsible Driving", q: "New driver alcohol limit?", opts: ["0.02%", "0.05%", "0.08%", "0.10%"], ans: 0},
-            {id: 16, cat: "Safe and Social Responsible Driving", q: "Approaching school zone?", opts: ["Sound horn", "Maintain speed", "Slow + ready stop", "Overtake"], ans: 2},
-            {id: 17, cat: "Technical Matters", q: "What does this sign mean?", opts: ["Stop", "Yield", "No Entry", "Slow"], ans: 0},
-            {id: 18, cat: "Technical Matters", q: "What does this sign indicate?", opts: ["Stop ahead", "No entry", "One way", "Road closed"], ans: 1},
-            {id: 19, cat: "Technical Matters", q: "At roundabout, who has right of way?", opts: ["Left traffic", "Right traffic", "Entering", "On roundabout"], ans: 3},
-            {id: 20, cat: "Technical Matters", q: "Blue circle with white arrow?", opts: ["No turn", "Must turn", "Optional", "Stop"], ans: 1}
+            {
+                id: 21,
+                category: "CAT01",
+                question: "What should you check before starting a long journey?",
+                options: [
+                    "Fuel only",
+                    "Tires, oil and lights",
+                    "Radio station",
+                    "Car color"
+                ],
+                answer: 1,
+                image: "",
+                explanation: "Drivers should check tires, oil levels and lights before a long journey to ensure the vehicle is safe."
+            },
+            {
+                id: 22,
+                category: "CAT01",
+                question: "What can reduce tire grip on wet roads?",
+                options: [
+                    "Low speed",
+                    "Hydroplaning",
+                    "Good brakes",
+                    "Seatbelts"
+                ],
+                answer: 1,
+                image: "",
+                explanation: "Hydroplaning happens when tires lose contact with the road due to water."
+            },
+            {
+                id: 23,
+                category: "CAT02",
+                question: "What does a continuous white line mean?",
+                options: [
+                    "Parking allowed",
+                    "No overtaking",
+                    "Bus lane",
+                    "Road ending"
+                ],
+                answer: 1,
+                image: "",
+                explanation: "A continuous white line usually means overtaking is not allowed."
+            },
+            {
+                id: 24,
+                category: "CAT02",
+                question: "What should you do at a yellow box junction?",
+                options: [
+                    "Stop inside",
+                    "Enter only if exit is clear",
+                    "Drive fast",
+                    "Ignore markings"
+                ],
+                answer: 1,
+                image: "",
+                explanation: "Drivers should only enter a yellow box when their exit is clear."
+            },
+            {
+                id: 25,
+                category: "CAT03",
+                question: "Why should you avoid tailgating?",
+                options: [
+                    "Uses more fuel",
+                    "Reduces stopping distance",
+                    "Increases crash risk",
+                    "Makes driving easier"
+                ],
+                answer: 2,
+                image: "",
+                explanation: "Following too closely increases the risk of collision if traffic stops suddenly."
+            },
+            {
+                id: 26,
+                category: "CAT03",
+                question: "What should you do if feeling tired while driving?",
+                options: [
+                    "Open window only",
+                    "Drive faster",
+                    "Take a break",
+                    "Turn music louder"
+                ],
+                answer: 2,
+                image: "",
+                explanation: "Drivers should stop and rest when tired because fatigue affects concentration."
+            },
+            {
+                id: 27,
+                category: "CAT04",
+                question: "Why should drivers check mirrors before changing lanes?",
+                options: [
+                    "To see passengers",
+                    "To check blind spots",
+                    "To clean mirrors",
+                    "To check speed"
+                ],
+                answer: 1,
+                image: "",
+                explanation: "Checking mirrors and blind spots helps avoid collisions when changing lanes."
+            },
+            {
+                id: 28,
+                category: "CAT04",
+                question: "What should drivers do near pedestrians?",
+                options: [
+                    "Speed up",
+                    "Ignore crossings",
+                    "Be prepared to stop",
+                    "Use horn continuously"
+                ],
+                answer: 2,
+                image: "",
+                explanation: "Drivers should slow down and prepare to stop near pedestrians and crossings."
+            },
+            {
+                id: 29,
+                category: "CAT05",
+                question: "What does a red octagon sign mean?",
+                options: [
+                    "Yield",
+                    "Stop",
+                    "School",
+                    "No parking"
+                ],
+                answer: 1,
+                image: "RS001-stop.webp",
+                explanation: "A red octagon is the international road sign shape for STOP."
+            },
+            {
+                id: 30,
+                category: "CAT05",
+                question: "What does a triangular warning sign indicate?",
+                options: [
+                    "Mandatory direction",
+                    "Danger ahead",
+                    "Parking area",
+                    "Motorway"
+                ],
+                answer: 1,
+                image: "",
+                explanation: "Triangular signs are warning signs used to alert drivers to hazards ahead."
+            }
         ];
 
         let mode = '', currentQ = 0, score = 0, timer = null, timeLeft = 60, answered = false;
@@ -297,29 +421,50 @@
         }
 
         function doLogin() {
-            const code = document.getElementById('codeInput').value.trim();
-            if (code === 'Xarbi1234') {
+            const username = document.getElementById('usernameInput').value.trim();
+            const password = document.getElementById('passwordInput').value;
+
+            if (username === 'fynah' && password === 'Fynah2026!') {
                 show('home');
             } else {
                 document.getElementById('loginError').style.display = 'block';
             }
         }
 
-        document.getElementById('codeInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') doLogin();
+        ['usernameInput', 'passwordInput'].forEach(function(id) {
+            document.getElementById(id).addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') doLogin();
+            });
         });
 
+        function shuffleQuestions() {
+            questions.sort(() => Math.random() - 0.5);
+        }
+
         function startQuiz(m) {
-            mode = m; currentQ = 0; score = 0; categoryScores = {};
-            show('quiz'); loadQ();
+            mode = m;
+            currentQ = 0;
+            score = 0;
+            categoryScores = {};
+            shuffleQuestions();
+            show('quiz');
+            loadQ();
         }
 
         function loadQ() {
             const q = questions[currentQ];
             answered = false;
             document.getElementById('qNum').textContent = 'Q ' + (currentQ + 1) + '/' + questions.length;
-            document.getElementById('cat').textContent = q.cat;
-            document.getElementById('qText').textContent = q.q;
+            document.getElementById('cat').textContent = categories[q.category] || q.category;
+            document.getElementById('qText').textContent = q.question;
+            const qImage = document.getElementById('qImage');
+            if (q.image && q.image.trim() !== '') {
+                qImage.src = q.image;
+                qImage.style.display = 'block';
+            } else {
+                qImage.src = '';
+                qImage.style.display = 'none';
+            }
             document.getElementById('feedback').className = 'feedback';
 
             if (mode === 'test') {
@@ -328,10 +473,11 @@
                 startTimer();
             } else {
                 document.getElementById('timer').style.display = 'none';
+                clearInterval(timer);
             }
 
             let html = '';
-            q.opts.forEach((opt, i) => {
+            q.options.forEach((opt, i) => {
                 html += '<div class="option" onclick="select(' + i + ')">';
                 html += '<div class="opt-letter">' + String.fromCharCode(65+i) + '</div>';
                 html += '<div class="opt-text">' + opt + '</div>';
@@ -361,23 +507,27 @@
             answered = true;
             clearInterval(timer);
             const q = questions[currentQ];
-            const correct = idx === q.ans;
+            const correct = idx === q.answer;
             if (correct) score++;
 
-            if (!categoryScores[q.cat]) categoryScores[q.cat] = { correct: 0, total: 0 };
-            categoryScores[q.cat].total++;
-            if (correct) categoryScores[q.cat].correct++;
+            if (!categoryScores[q.category]) categoryScores[q.category] = { correct: 0, total: 0 };
+            categoryScores[q.category].total++;
+            if (correct) categoryScores[q.category].correct++;
 
             document.querySelectorAll('.option').forEach((opt, i) => {
                 opt.style.pointerEvents = 'none';
-                if (i === q.ans) opt.classList.add('correct');
+                if (i === q.answer) opt.classList.add('correct');
                 else if (i === idx && !correct) opt.classList.add('wrong');
             });
 
             const fb = document.getElementById('feedback');
             fb.className = 'feedback show ' + (correct ? 'correct' : 'wrong');
             document.getElementById('fbTitle').textContent = correct ? 'Correct!' : 'Wrong!';
-            document.getElementById('fbText').textContent = 'Answer: ' + q.opts[q.ans];
+            document.getElementById('fbText').innerHTML =
+                '<strong>Correct Answer:</strong> ' +
+                q.options[q.answer] +
+                '<br><br>' +
+                q.explanation;
         }
 
         function nextQ() {
@@ -388,11 +538,11 @@
 
         function showResults() {
             show('results');
-            const pass = score >= 16;
+            const pass = score >= 8;
             const wrong = questions.length - score;
             document.getElementById('scoreCircle').textContent = score + '/' + questions.length;
             document.getElementById('scoreCircle').className = 'score-circle ' + (pass ? 'pass' : 'fail');
-            document.getElementById('rTitle').textContent = pass ? 'PASSED!' : 'Failed';
+            document.getElementById('rTitle').textContent = pass ? 'PASSED 🎉' : 'FAILED ❌';
             document.getElementById('rMsg').textContent = 'Correct: ' + score + ' | Wrong: ' + wrong + ' | Total: ' + questions.length;
 
             let catHtml = '<h3 style="margin-bottom: 15px; color: #1e3c72;">Category Breakdown</h3>';
@@ -400,7 +550,7 @@
                 const cs = categoryScores[cat];
                 const w = cs.total - cs.correct;
                 catHtml += '<div class="cat-result">';
-                catHtml += '<div class="cat-name">' + cat + '</div>';
+                catHtml += '<div class="cat-name">' + (categories[cat] || cat) + '</div>';
                 catHtml += '<div class="cat-stats">';
                 catHtml += '<span style="color: #4caf50;">Correct: ' + cs.correct + '</span>';
                 catHtml += '<span style="color: #f44336;">Wrong: ' + w + '</span>';
@@ -410,7 +560,14 @@
             document.getElementById('categoryResults').innerHTML = catHtml;
         }
 
-        function goHome() { show('home'); }
+        function goHome() {
+            clearInterval(timer);
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+            show('home');
+        }
 
         // ============ MP3 AUDIO (FILES IN ROOT FOLDER) ============
         function playAudio(src) {
@@ -434,12 +591,6 @@
         function playOpt(idx) {
             const q = questions[currentQ];
             playAudio('q' + q.id + '_opt' + idx + '.mp3');
-        }
-
-        // Play explanation audio - looks for file in ROOT folder
-        function playExplanation() {
-            const q = questions[currentQ];
-            playAudio('q' + q.id + '_exp.mp3');
         }
 
         // Init
