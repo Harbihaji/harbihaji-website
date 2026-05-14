@@ -1,0 +1,133 @@
+[
+  {
+    "id": 21,
+    "category": "CAT01",
+    "questionEnglish": "What should you check before starting a long journey?",
+    "questionSomali": "Maxaad hubinaysaa ka hor safar dheer?",
+    "optionsEnglish": [
+      "Fuel only",
+      "Tires, oil and lights",
+      "Radio station",
+      "Car color"
+    ],
+    "optionsSomali": [
+      "Shidaal keliya",
+      "Taayirro, saliid iyo nalal",
+      "Raadiyaha",
+      "Midabka gaariga"
+    ],
+    "answer": 1,
+    "image": "vehicle-check.webp",
+    "explanationSomali": "Darawalku waa inuu hubiyaa taayirrada, saliidda iyo nalalka si gaarigu u noqdo mid ammaan ah."
+  },
+  {
+  "id": 31,
+  "category": "CAT03",
+  "questionEnglish": "Is using a handheld mobile phone while driving allowed?",
+  "questionSomali": "Ma la oggol yahay isticmaalka telefoon gacanta lagu hayo marka la wado?",
+  "optionsEnglish": ["Yes, if driving slowly", "Yes, at traffic lights", "No", "Only on motorway"],
+  "optionsSomali": ["Haa, haddii si tartiib ah loo wado", "Haa, marka nalka taraafikada la joogo", "Maya", "Kaliya motorway-ga"],
+  "answer": 2,
+  "image": "no-phone.webp",
+  "explanationSomali": "Isticmaalka telefoon gacanta lagu hayo marka la wado waa khatar, wuxuuna yareeyaa feejignaanta darawalka."
+},
+{
+  "id": 32,
+  "category": "CAT03",
+  "questionEnglish": "What should you do in heavy rain?",
+  "questionSomali": "Maxaad sameynaysaa marka roob culus jiro?",
+  "optionsEnglish": ["Drive faster", "Slow down", "Use hazard lights always", "Follow closely"],
+  "optionsSomali": ["Si degdeg ah u wad", "Xawaaraha yaree", "Mar walba hazard lights shid", "Si dhow u raac"],
+  "answer": 1,
+  "image": "heavy-rain.webp",
+  "explanationSomali": "Roobka culus wuxuu yareeyaa aragtida iyo qabsashada waddada, sidaas darteed waa in xawaaraha la yareeyaa."
+},
+{
+  "id": 33,
+  "category": "CAT04",
+  "questionEnglish": "Why should drivers check mirrors before changing lanes?",
+  "questionSomali": "Maxay muhiim u tahay in muraayadaha la hubiyo ka hor inta aan lane la beddelin?",
+  "optionsEnglish": ["To check blind spots", "To check passengers", "To clean mirrors", "To change music"],
+  "optionsSomali": ["Si loo hubiyo meelaha qarsoon", "Si loo eego rakaabka", "Si muraayadaha loo nadiifiyo", "Si muusigga loo beddelo"],
+  "answer": 0,
+  "image": "mirror-check.webp",
+  "explanationSomali": "Hubinta muraayadaha waxay kaa caawisaa inaad aragto gaadiidka ama dadka ku jira meelaha qarsoon."
+},
+{
+  "id": 34,
+  "category": "CAT04",
+  "questionEnglish": "What should drivers do near pedestrians?",
+  "questionSomali": "Maxay tahay in darawalku sameeyo marka dadka lugaynaya ag dhow yihiin?",
+  "optionsEnglish": ["Speed up", "Be prepared to stop", "Use horn continuously", "Ignore them"],
+  "optionsSomali": ["Xawaaraha kordhi", "Diyaar u noqo inaad istaagto", "Horn-ka si joogto ah u isticmaal", "Iska indhatir"],
+  "answer": 1,
+  "image": "pedestrian-crossing.webp",
+  "explanationSomali": "Darawalku waa inuu xawaaraha yareeyaa oo diyaar u noqdaa inuu istaago marka dadka lugaynaya ag dhow yihiin."
+},
+{
+  "id": 35,
+  "category": "CAT04",
+  "questionEnglish": "Who must wear seatbelts in a car?",
+  "questionSomali": "Yaa qasab ku ah inuu xirto suunka badbaadada gaariga dhexdiisa?",
+  "optionsEnglish": ["Driver only", "Front passengers only", "Everyone in the vehicle", "Children only"],
+  "optionsSomali": ["Darawalka keliya", "Rakaabka hore keliya", "Dhammaan dadka gaariga saaran", "Carruurta keliya"],
+  "answer": 2,
+  "image": "seatbelt.webp",
+  "explanationSomali": "Dhammaan dadka gaariga saaran waa inay xirtaan suunka badbaadada si loo yareeyo dhaawaca shilalka."
+},
+{
+  "id": 36,
+  "category": "CAT04",
+  "questionEnglish": "What should you do near a school zone?",
+  "questionSomali": "Maxaad sameynaysaa marka aad ku dhowdahay school zone?",
+  "optionsEnglish": ["Slow down", "Overtake quickly", "Sound horn", "Drive normally"],
+  "optionsSomali": ["Xawaaraha yaree", "Si degdeg ah u dhaaf", "Horn-ka isticmaal", "Si caadi ah u wad"],
+  "answer": 0,
+  "image": "school-zone.webp",
+  "explanationSomali": "School zone waa meel carruur badan joogaan, sidaas darteed darawalku waa inuu si taxaddar leh u wadaa."
+},
+{
+  "id": 37,
+  "category": "CAT05",
+  "questionEnglish": "What does a red octagon sign mean?",
+  "questionSomali": "Maxay ka dhigan tahay calaamad cas oo octagon ah?",
+  "optionsEnglish": ["Yield", "Stop", "No parking", "School"],
+  "optionsSomali": ["Yield", "Istaag", "Baarkin lama oggola", "Iskuul"],
+  "answer": 1,
+  "image": "stop-sign.webp",
+  "explanationSomali": "Calaamadda cas ee octagon-ka ah waxay ka dhigan tahay STOP, waana in darawalku si buuxda u istaagaa."
+},
+{
+  "id": 38,
+  "category": "CAT05",
+  "questionEnglish": "What does a triangular warning sign indicate?",
+  "questionSomali": "Maxay tilmaamaysaa calaamad saddex xagal ah?",
+  "optionsEnglish": ["Danger ahead", "Parking area", "Motorway", "Speed limit"],
+  "optionsSomali": ["Khatar ayaa hore jirta", "Goob baarkin", "Motorway", "Xadka xawaaraha"],
+  "answer": 0,
+  "image": "warning-sign.webp",
+  "explanationSomali": "Calaamadaha saddex xagalka ah waxay digniin ka bixiyaan khatar ama xaalad waddo oo hore jirta."
+},
+{
+  "id": 39,
+  "category": "CAT05",
+  "questionEnglish": "What does a blue circular sign usually mean?",
+  "questionSomali": "Maxay badanaa ka dhigan tahay calaamad buluug ah oo wareegsan?",
+  "optionsEnglish": ["Warning", "Mandatory instruction", "No entry", "Parking only"],
+  "optionsSomali": ["Digniin", "Amar qasab ah", "Gelid lama oggola", "Baarkin keliya"],
+  "answer": 1,
+  "image": "mandatory-sign.webp",
+  "explanationSomali": "Calaamadaha buluugga ah ee wareegsan waxay badanaa bixiyaan amar qasab ah oo darawalku raaco."
+},
+{
+  "id": 40,
+  "category": "CAT05",
+  "questionEnglish": "What does a no entry sign mean?",
+  "questionSomali": "Maxay ka dhigan tahay calaamadda no entry?",
+  "optionsEnglish": ["Vehicles must not enter", "Parking allowed", "One way", "School ahead"],
+  "optionsSomali": ["Gaadiidku ma geli karo", "Baarkin waa la oggol yahay", "Hal jid", "Iskuul ayaa hore jira"],
+  "answer": 0,
+  "image": "no-entry.webp",
+  "explanationSomali": "Calaamadda no entry waxay ka dhigan tahay in gaadiidku uusan geli karin waddadaas."
+}
+]
