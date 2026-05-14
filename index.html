@@ -311,152 +311,16 @@
         };
 
         let questions = [];
-            {
-                id: 21,
-                category: "CAT01",
-                question: "What should you check before starting a long journey?",
-                options: [
-                    "Fuel only",
-                    "Tires, oil and lights",
-                    "Radio station",
-                    "Car color"
-                ],
-                answer: 1,
-                image: "",
-                explanation: "Darawalku waa inuu hubiyaa taayirrada, saliidda iyo nalalka ka hor safar dheer si uu u xaqiijiyo in gaarigu ammaan yahay."
-            },
-            {
-                id: 22,
-                category: "CAT01",
-                question: "What can reduce tire grip on wet roads?",
-                options: [
-                    "Low speed",
-                    "Hydroplaning",
-                    "Good brakes",
-                    "Seatbelts"
-                ],
-                answer: 1,
-                image: "",
-                explanation: "Hydroplaning wuxuu dhaca marka taayirradu ka go'aan wadada sababtuna tahay biyaha, taasoo yareysa xajmiga."
-            },
-            {
-                id: 23,
-                category: "CAT02",
-                question: "What does a continuous white line mean?",
-                options: [
-                    "Parking allowed",
-                    "No overtaking",
-                    "Bus lane",
-                    "Road ending"
-                ],
-                answer: 1,
-                image: "",
-                explanation: "Xariiqda caddaanka ah ee joogtada ah badanaa waxay ka dhigan tahay in/wax la dhaafi karin."
-            },
-            {
-                id: 24,
-                category: "CAT02",
-                question: "What should you do at a yellow box junction?",
-                options: [
-                    "Stop inside",
-                    "Enter only if exit is clear",
-                    "Drive fast",
-                    "Ignore markings"
-                ],
-                answer: 1,
-                image: "",
-                explanation: "Waa inaad gelisaa sanduuqa huruudka kaliya marka ka bixitaankaaga uu nadiif yahay si aad u ilaaliso gaadiidka kale."
-            },
-            {
-                id: 25,
-                category: "CAT03",
-                question: "Why should you avoid tailgating?",
-                options: [
-                    "Uses more fuel",
-                    "Reduces stopping distance",
-                    "Increases crash risk",
-                    "Makes driving easier"
-                ],
-                answer: 2,
-                image: "",
-                explanation: "Raacitaanka gaari kale si dhow wuxuu kordhiyaa khatarta shil haddii gaadhigu si kedis ah u istaago."
-            },
-            {
-                id: 26,
-                category: "CAT03",
-                question: "What should you do if feeling tired while driving?",
-                options: [
-                    "Open window only",
-                    "Drive faster",
-                    "Take a break",
-                    "Turn music louder"
-                ],
-                answer: 2,
-                image: "",
-                explanation: "Haddii aad daal dareento, waa inaad joojisaa oo nasataa maxaa yeelay daalka wuxuu saameeyaa feejignaantaada."
-            },
-            {
-                id: 27,
-                category: "CAT04",
-                question: "Why should drivers check mirrors before changing lanes?",
-                options: [
-                    "To see passengers",
-                    "To check blind spots",
-                    "To clean mirrors",
-                    "To check speed"
-                ],
-                answer: 1,
-                image: "",
-                explanation: "Hubinta muraayadaha iyo meelaha foolka ka xiran waxay ka hortagtaa shilal marka aad lane beddelayso."
-            },
-            {
-                id: 28,
-                category: "CAT04",
-                question: "What should drivers do near pedestrians?",
-                options: [
-                    "Speed up",
-                    "Ignore crossings",
-                    "Be prepared to stop",
-                    "Use horn continuously"
-                ],
-                answer: 2,
-                image: "",
-                explanation: "Darawalladu waa inay hoos u dhacaan oo diyaar u noqdaan inay istaagaan marka ay u dhow yihiin lugeeyayaasha."
-            },
-            {
-                id: 29,
-                category: "CAT05",
-                question: "What does a red octagon sign mean?",
-                options: [
-                    "Yield",
-                    "Stop",
-                    "School",
-                    "No parking"
-                ],
-                answer: 1,
-                image: "RS001-stop.webp",
-                explanation: "Astaanta octagon cas waa calaamad caalami ah oo muujinaysa in darawalku istaago."
-            },
-            {
-                id: 30,
-                category: "CAT05",
-                question: "What does a triangular warning sign indicate?",
-                options: [
-                    "Mandatory direction",
-                    "Danger ahead",
-                    "Parking area",
-                    "Motorway"
-                ],
-                answer: 1,
-                image: "",
-                explanation: "Calaamadaha saddexagalka ah waxay ka digayaan khataro horay u jira ama xaalado gaar ah oo waddada ah."
-            }
-        ];
 
-        fetch('questions-full.json')
-            .then(response => response.json())
-            .then(data => { questions = data; })
-            .catch(error => console.error('Error loading questions:', error));
+        async function loadQuestions() {
+            try {
+                const response = await fetch('questions-full.json');
+                questions = await response.json();
+            } catch (error) {
+                console.error('Error loading questions:', error);
+                alert('Failed to load questions. Please check your connection.');
+            }
+        }
 
         let mode = '';
         let currentQ = 0;
@@ -520,13 +384,19 @@
             mode = m;
             currentQ = 0;
             categoryScores = {};
-            activeQuizQuestions = [...questions].sort(() => Math.random() - 0.5);
+            activeQuizQuestions = [...questions]
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 10);
             userAnswers = new Array(activeQuizQuestions.length).fill(null);
             show('quiz');
             loadQ();
         }
 
         function loadQ() {
+            if (!activeQuizQuestions.length) {
+                alert("No questions found.");
+                return;
+            }
             const q = activeQuizQuestions[currentQ];
             answered = false;
             document.getElementById('qNum').textContent = 'Q ' + (currentQ + 1) + '/' + activeQuizQuestions.length;
@@ -746,7 +616,10 @@
             playAudio('audio/q' + q.id + '_opt' + idx + '.mp3');
         }
 
-        show('login');
+        window.onload = async function () {
+            await loadQuestions();
+            show('login');
+        };
     </script>
 </body>
 </html>

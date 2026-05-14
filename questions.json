@@ -2,11 +2,101 @@
   {
     "id": 21,
     "question": "Maxaad hubinaysaa ka hor safar dheer?",
-    "options": [
-      "Shidaal keliya",
-      "Taayirro, saliid iyo nalal",
-      "Raadiyaha",
-      "Midabka gaariga"
-    ]
+    "options": ["Shidaal keliya", "Taayirro, saliid iyo nalal", "Raadiyaha", "Midabka gaariga"]
+  },
+  {
+    "id": 22,
+    "question": "Maxaa yareyn kara qabsashada taayirka marka waddadu qoyan tahay?",
+    "options": ["Xawaare hoose", "Hydroplaning", "Biriig wanaagsan", "Suunka badbaadada"]
+  },
+  {
+    "id": 23,
+    "question": "Goorma ayaa la isticmaalaa nalalka ceeryaanta?",
+    "options": ["Mar walba", "Kaliya habeenkii", "Marka aragtidu liidato", "Kaliya motorway-ga"]
+  },
+  {
+    "id": 24,
+    "question": "Waa maxay shaqada biriiga gacanta?",
+    "options": ["Inuu kordhiyo xawaaraha", "Inuu damiyo matoorka", "Inuu gaariga qabto marka la dhigto", "Inuu nadiifiyo taayirrada"]
+  },
+  {
+    "id": 25,
+    "question": "Maxay ka dhigan tahay xarriiq cad oo joogto ah?",
+    "options": ["Baarkin waa la oggol yahay", "Lama dhaafi karo", "Waddo bas", "Waddo xiran"]
+  },
+  {
+    "id": 26,
+    "question": "Maxaad sameynaysaa markaad gaarto yellow box junction?",
+    "options": ["Gudaha ku istaag", "Geli haddii bixitaanku bannaan yahay", "Si degdeg ah u wad", "Iska indhatir calaamadaha"]
+  },
+  {
+    "id": 27,
+    "question": "Waa imisa xadka xawaaraha motorway-ga Ireland?",
+    "options": ["80 km/h", "100 km/h", "120 km/h", "140 km/h"]
+  },
+  {
+    "id": 28,
+    "question": "Yaa leh mudnaanta isgoys aan calaamad lahayn?",
+    "options": ["Gaadiidka midigta", "Gaadiidka bidixda", "Gaadiidka waaweyn", "Gaadiidka dheereeya"]
+  },
+  {
+    "id": 29,
+    "question": "Maxaa looga fogaanayaa in si dhow loo daba socdo?",
+    "options": ["Waxay isticmaashaa shidaal badan", "Waxay yaraysaa biriiga", "Waxay kordhisaa halista shil", "Waxay kordhisaa xawaaraha"]
+  },
+  {
+    "id": 30,
+    "question": "Maxaad sameynaysaa haddii aad dareento daal adigoo wada?",
+    "options": ["Si degdeg ah u wad", "Daaqadda fur", "Naso", "Muusig cod dheer shid"]
+  },
+  {
+    "id": 31,
+    "question": "Ma la oggol yahay isticmaalka telefoon gacanta lagu hayo marka la wado?",
+    "options": ["Haa, haddii si tartiib ah loo wado", "Haa, marka nalka taraafikada la joogo", "Maya", "Kaliya motorway-ga"]
+  },
+  {
+    "id": 32,
+    "question": "Maxaad sameynaysaa marka roob culus jiro?",
+    "options": ["Si degdeg ah u wad", "Xawaaraha yaree", "Mar walba hazard lights shid", "Si dhow u raac"]
+  },
+  {
+    "id": 33,
+    "question": "Maxay muhiim u tahay in muraayadaha la hubiyo ka hor inta aan lane la beddelin?",
+    "options": ["Si loo hubiyo meelaha qarsoon", "Si loo eego rakaabka", "Si muraayadaha loo nadiifiyo", "Si muusigga loo beddelo"]
+  },
+  {
+    "id": 34,
+    "question": "Maxay tahay in darawalku sameeyo marka dadka lugaynaya ag dhow yihiin?",
+    "options": ["Xawaaraha kordhi", "Diyaar u noqo inaad istaagto", "Horn-ka si joogto ah u isticmaal", "Iska indhatir"]
+  },
+  {
+    "id": 35,
+    "question": "Yaa qasab ku ah inuu xirto suunka badbaadada gaariga dhexdiisa?",
+    "options": ["Darawalka keliya", "Rakaabka hore keliya", "Dhammaan dadka gaariga saaran", "Carruurta keliya"]
+  },
+  {
+    "id": 36,
+    "question": "Maxaad sameynaysaa marka aad ku dhowdahay school zone?",
+    "options": ["Xawaaraha yaree", "Si degdeg ah u dhaaf", "Horn-ka isticmaal", "Si caadi ah u wad"]
+  },
+  {
+    "id": 37,
+    "question": "Maxay ka dhigan tahay calaamad cas oo octagon ah?",
+    "options": ["Yield", "Istaag", "Baarkin lama oggola", "Iskuul"]
+  },
+  {
+    "id": 38,
+    "question": "Maxay tilmaamaysaa calaamad saddex xagal ah?",
+    "options": ["Khatar ayaa hore jirta", "Goob baarkin", "Motorway", "Xadka xawaaraha"]
+  },
+  {
+    "id": 39,
+    "question": "Maxay badanaa ka dhigan tahay calaamad buluug ah oo wareegsan?",
+    "options": ["Digniin", "Amar qasab ah", "Gelid lama oggola", "Baarkin keliya"]
+  },
+  {
+    "id": 40,
+    "question": "Maxay ka dhigan tahay calaamadda no entry?",
+    "options": ["Gaadiidku ma geli karo", "Baarkin waa la oggol yahay", "Hal jid", "Iskuul ayaa hore jira"]
   }
 ]
