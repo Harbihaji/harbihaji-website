@@ -1,0 +1,23 @@
+[
+  {
+    "id": 21,
+    "category": "CAT01",
+    "questionEnglish": "What should you check before starting a long journey?",
+    "questionSomali": "Maxaad hubinaysaa ka hor safar dheer?",
+    "optionsEnglish": [
+      "Fuel only",
+      "Tires, oil and lights",
+      "Radio station",
+      "Car color"
+    ],
+    "optionsSomali": [
+      "Shidaal keliya",
+      "Taayirro, saliid iyo nalal",
+      "Raadiyaha",
+      "Midabka gaariga"
+    ],
+    "answer": 1,
+    "image": "vehicle-check.webp",
+    "explanationSomali": "Darawalku waa inuu hubiyaa taayirrada, saliidda iyo nalalka si gaarigu u noqdo mid ammaan ah."
+  }
+]
