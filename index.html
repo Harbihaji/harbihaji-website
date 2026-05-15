@@ -6,299 +6,52 @@
   <title>Fynah Theory Learning</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #1e3c72;
-      min-height: 100dvh;
-      color: #333;
-      overflow-x: hidden;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 10px;
-    }
-
+    body { font-family: Arial, sans-serif; background: #1e3c72; min-height: 100dvh; color: #333; overflow-x: hidden; }
+    .container { width: 100%; max-width: 760px; margin: 0 auto; padding: 10px; }
     .screen { display: none; }
     .screen.active { display: block; }
-
-    .card,
-    .login-box,
-    .q-card {
-      background: white;
-      border-radius: 15px;
-      padding: 16px;
-      margin-bottom: 10px;
-    }
-
-    .login-box {
-      margin-top: 25px;
-      text-align: center;
-    }
-
-    .login-box h1 {
-      color: #1e3c72;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      margin: 8px 0;
-      text-align: center;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      background: #667eea;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 8px;
-    }
-
+    .login-box, .q-card { background: white; border-radius: 15px; padding: 16px; margin-bottom: 10px; }
+    .login-box { margin-top: 25px; text-align: center; }
+    .login-box h1 { color: #1e3c72; font-size: 24px; margin-bottom: 8px; }
+    input { width: 100%; padding: 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; margin: 8px 0; text-align: center; }
+    button { width: 100%; padding: 12px; font-size: 16px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer; margin-top: 8px; }
     button:hover { background: #764ba2; }
-
-    .error {
-      color: red;
-      margin-top: 10px;
-      display: none;
-    }
-
-    .home-title,
-    .category-title {
-      color: white;
-      text-align: center;
-      margin: 18px 0;
-    }
-
-    .mode-btn,
-    .category-btn {
-      background: white;
-      color: #1e3c72;
-      padding: 16px;
-      border-radius: 15px;
-      margin: 12px 0;
-      cursor: pointer;
-      border: none;
-      text-align: left;
-    }
-
-    .mode-btn h2 {
-      font-size: 18px;
-      margin-bottom: 5px;
-      color: #1e3c72;
-    }
-
-    .mode-btn p {
-      color: #666;
-      font-size: 13px;
-    }
-
-    .category-btn {
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .quiz-header {
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .back {
-      font-size: 24px;
-      cursor: pointer;
-      padding: 4px 8px;
-    }
-
-    .timer {
-      color: #e74c3c;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .cat {
-      background: #e3f2fd;
-      color: #1976d2;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 12px;
-      display: inline-block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .q-text {
-      font-size: 18px;
-      line-height: 1.35;
-      font-weight: bold;
-      margin-bottom: 8px;
-      color: #1e3c72;
-    }
-
-    .q-image {
-      width: 100%;
-      max-height: 230px;
-      object-fit: contain;
-      border-radius: 12px;
-      display: none;
-      margin: 10px 0;
-    }
-
-    .audio-wrap {
-      text-align: center;
-      margin: 10px 0;
-    }
-
-    .audio-btn {
-      background: #4caf50;
-      width: auto;
-      padding: 9px 18px;
-      border-radius: 20px;
-      font-size: 14px;
-      margin: 4px;
-    }
-
-    .option {
-      background: #f5f5f5;
-      padding: 11px;
-      border-radius: 10px;
-      margin: 7px 0;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      min-height: 50px;
-      border: 2px solid transparent;
-    }
-
+    .error { color: red; margin-top: 10px; display: none; }
+    .home-title, .category-title { color: white; text-align: center; margin: 18px 0; }
+    .mode-btn, .category-btn { background: white; color: #1e3c72; padding: 16px; border-radius: 15px; margin: 12px 0; cursor: pointer; border: none; text-align: left; }
+    .mode-btn h2 { font-size: 18px; margin-bottom: 5px; color: #1e3c72; }
+    .mode-btn p { color: #666; font-size: 13px; }
+    .category-btn { text-align: center; font-weight: bold; }
+    .quiz-header { background: white; padding: 10px; border-radius: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .back { font-size: 24px; cursor: pointer; padding: 4px 8px; }
+    .timer { color: #e74c3c; font-weight: bold; font-size: 18px; }
+    .cat { background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 20px; font-size: 12px; display: inline-block; margin-bottom: 10px; font-weight: bold; }
+    .q-text { font-size: 18px; line-height: 1.35; font-weight: bold; margin-bottom: 8px; color: #1e3c72; }
+    .q-image { width: 100%; max-height: 230px; object-fit: contain; border-radius: 12px; display: none; margin: 10px 0; }
+    .audio-wrap { text-align: center; margin: 10px 0; }
+    .audio-btn { background: #4caf50; width: auto; padding: 9px 18px; border-radius: 20px; font-size: 14px; margin: 4px; }
+    .option { background: #f5f5f5; padding: 11px; border-radius: 10px; margin: 7px 0; cursor: pointer; display: flex; align-items: center; min-height: 50px; border: 2px solid transparent; }
     .option:hover { background: #e3f2fd; }
-
-    .selected {
-      background: #dce6ff !important;
-      border: 2px solid #667eea;
-    }
-
+    .selected { background: #dce6ff !important; border: 2px solid #667eea; }
     .correct { background: #c8e6c9 !important; }
     .wrong { background: #ffcdd2 !important; }
-
-    .opt-letter {
-      background: #1e3c72;
-      color: white;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 10px;
-      font-weight: bold;
-      flex-shrink: 0;
-    }
-
+    .opt-letter { background: #1e3c72; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-weight: bold; flex-shrink: 0; }
     .opt-text { flex: 1; }
-
-    .opt-audio {
-      background: #ff9800;
-      color: white;
-      border: none;
-      width: 36px;
-      height: 36px;
-      min-width: 36px;
-      border-radius: 50%;
-      cursor: pointer;
-      margin-left: 8px;
-      padding: 0;
-      font-size: 16px;
-    }
-
-    .feedback {
-      display: none;
-      padding: 12px;
-      border-radius: 10px;
-      margin-top: 12px;
-      text-align: center;
-    }
-
+    .opt-audio { background: #ff9800; color: white; border: none; width: 36px; height: 36px; min-width: 36px; border-radius: 50%; cursor: pointer; margin-left: 8px; padding: 0; font-size: 16px; }
+    .feedback { display: none; padding: 12px; border-radius: 10px; margin-top: 12px; text-align: center; }
     .feedback.show { display: block; }
     .feedback.correct { background: #c8e6c9; color: #2e7d32; }
     .feedback.wrong { background: #ffcdd2; color: #c62828; }
     .feedback.neutral { background: #eef3ff; color: #1e3c72; }
-
-    .feedback p {
-      font-size: 15px;
-      line-height: 1.45;
-      margin-top: 8px;
-    }
-
-    #quizButtons {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .score-circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin: 0 auto 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      font-weight: bold;
-      color: white;
-    }
-
+    .feedback p { font-size: 15px; line-height: 1.45; margin-top: 8px; }
+    #quizButtons { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+    .score-circle { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; color: white; }
     .pass { background: #4caf50; }
     .fail { background: #f44336; }
-
-    .cat-result {
-      background: #f5f5f5;
-      padding: 12px;
-      margin: 8px 0;
-      border-radius: 8px;
-      text-align: left;
-    }
-
-    .cat-name {
-      font-weight: bold;
-      color: #1e3c72;
-      margin-bottom: 5px;
-    }
-
-    .cat-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 14px;
-    }
-
-    .watermark {
-      position: fixed;
-      bottom: 5px;
-      right: 5px;
-      opacity: 0.3;
-      font-size: 10px;
-      color: white;
-      pointer-events: none;
-    }
+    .cat-result { background: #f5f5f5; padding: 12px; margin: 8px 0; border-radius: 8px; text-align: left; }
+    .cat-name { font-weight: bold; color: #1e3c72; margin-bottom: 5px; }
+    .cat-stats { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
+    .watermark { position: fixed; bottom: 5px; right: 5px; opacity: 0.3; font-size: 10px; color: white; pointer-events: none; }
   </style>
 </head>
 <body>
@@ -336,7 +89,7 @@
 
     <div id="quiz" class="screen">
       <div class="quiz-header">
-        <span class="back" onclick="goHome()">&#8592;</span>
+        <span class="back" onclick="goHome()">←</span>
         <span id="qNum">Q 1/10</span>
         <span class="timer" id="timer">01:00</span>
       </div>
@@ -621,9 +374,7 @@
       finishBtn.style.display = "none";
 
       if (mode === "practice") {
-        if (answered) {
-          nextBtn.style.display = "inline-block";
-        }
+        if (answered) nextBtn.style.display = "inline-block";
         return;
       }
 
@@ -716,9 +467,13 @@
     function playAudio(src) {
       stopCurrentAudio();
       currentAudio = new Audio(src);
+
+      currentAudio.onerror = function () {
+        alert("Audio file not found or cannot play:\n" + src);
+      };
+
       currentAudio.play().catch(e => {
-        console.log("Audio error:", e);
-        alert("Audio file not found or cannot play: " + src);
+        console.log("Audio play failed:", e);
       });
     }
 
