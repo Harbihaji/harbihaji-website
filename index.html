@@ -1,278 +1,114 @@
-<!-- ============================================================ -->
-<!-- FYNAH THEORY LEARNING APP - IRELAND DRIVING THEORY TEST      -->
-<!-- Language: English questions + Somali audio explanations        -->
-<!-- Modes: Practice (per category) + Test (10 random questions)  -->
-<!-- ============================================================ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ========================================================== -->
-  <!-- HEAD SECTION: Meta tags, viewport, title, and CSS styles    -->
-  <!-- ========================================================== -->
   <meta charset="UTF-8" />
-  <!-- Mobile viewport: prevents zooming, sets width to device width -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Fynah Theory Learning</title>
   <style>
-    /* ============================================================ */
-    /* CSS RESET & BASE STYLES                                      */
-    /* Remove default margins/padding, set box model, base font      */
-    /* ============================================================ */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    /* ============================================================ */
-    /* BODY: Full height blue background, base text color            */
-    /* overflow-x: hidden prevents horizontal scroll on mobile       */
-    /* ============================================================ */
     body { font-family: Arial, sans-serif; background: #1e3c72; min-height: 100dvh; color: #333; overflow-x: hidden; }
-
-    /* ============================================================ */
-    /* CONTAINER: Centers content, max-width 760px for readability   */
-    /* ============================================================ */
     .container { width: 100%; max-width: 760px; margin: 0 auto; padding: 10px; }
-
-    /* ============================================================ */
-    /* SCREEN SYSTEM: Only one screen visible at a time              */
-    /* .screen = hidden by default                                   */
-    /* .screen.active = visible (controlled by JavaScript show())    */
-    /* ============================================================ */
     .screen { display: none; }
     .screen.active { display: block; }
-
-    /* ============================================================ */
-    /* CARD STYLES: White rounded boxes used across all screens      */
-    /* login-box = login screen card                                 */
-    /* q-card = quiz question card and results card                  */
-    /* ============================================================ */
     .login-box, .q-card { background: white; border-radius: 15px; padding: 16px; margin-bottom: 10px; }
     .login-box { margin-top: 25px; text-align: center; }
     .login-box h1 { color: #1e3c72; font-size: 24px; margin-bottom: 8px; }
-
-    /* ============================================================ */
-    /* FORM INPUTS: Username and password fields                     */
-    /* text-align: center for easy mobile typing                     */
-    /* ============================================================ */
     input { width: 100%; padding: 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; margin: 8px 0; text-align: center; }
-
-    /* ============================================================ */
-    /* BUTTONS: Default purple gradient button style                 */
-    /* Used for login, next, finish, home, restart                  */
-    /* ============================================================ */
     button { width: 100%; padding: 12px; font-size: 16px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer; margin-top: 8px; }
     button:hover { background: #764ba2; }
-
-    /* ============================================================ */
-    /* LOGIN ERROR MESSAGE: Hidden by default, shown on bad login    */
-    /* ============================================================ */
     .error { color: red; margin-top: 10px; display: none; }
-
-    /* ============================================================ */
-    /* HOME SCREEN: Title and mode selection cards                   */
-    /* ============================================================ */
     .home-title, .category-title { color: white; text-align: center; margin: 18px 0; }
-
-    /* ============================================================ */
-    /* MODE BUTTONS (Home Screen): Practice Mode & Test Mode cards */
-    /* White cards with blue text, clickable to enter each mode      */
-    /* ============================================================ */
     .mode-btn, .category-btn { background: white; color: #1e3c72; padding: 16px; border-radius: 15px; margin: 12px 0; cursor: pointer; border: none; text-align: left; }
     .mode-btn h2 { font-size: 18px; margin-bottom: 5px; color: #1e3c72; }
     .mode-btn p { color: #666; font-size: 13px; }
     .category-btn { text-align: center; font-weight: bold; }
-
-    /* ============================================================ */
-    /* QUIZ HEADER: Top bar showing back arrow, question number,     */
-    /* and countdown timer                                           */
-    /* ============================================================ */
     .quiz-header { background: white; padding: 10px; border-radius: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
     .back { font-size: 24px; cursor: pointer; padding: 4px 8px; }
     .timer { color: #e74c3c; font-weight: bold; font-size: 18px; }
-
-    /* ============================================================ */
-    /* CATEGORY BADGE: Small blue pill showing current category      */
-    /* ============================================================ */
     .cat { background: #e3f2fd; color: #1976d2; padding: 6px 14px; border-radius: 20px; font-size: 12px; display: inline-block; margin-bottom: 10px; font-weight: bold; }
-
-    /* ============================================================ */
-    /* QUESTION TEXT: Large bold blue text for the question          */
-    /* ============================================================ */
     .q-text { font-size: 18px; line-height: 1.35; font-weight: bold; margin-bottom: 8px; color: #1e3c72; }
-
-    /* ============================================================ */
-    /* QUESTION IMAGE: Hidden by default, shown if question has img  */
-    /* ============================================================ */
     .q-image { width: 100%; max-height: 230px; object-fit: contain; border-radius: 12px; display: none; margin: 10px 0; }
-
-    /* ============================================================ */
-    /* AUDIO BUTTON AREA: Centered green pill button for TTS audio   */
-    /* ============================================================ */
     .audio-wrap { text-align: center; margin: 10px 0; }
     .audio-btn { background: #4caf50; width: auto; padding: 9px 18px; border-radius: 20px; font-size: 14px; margin: 4px; }
-
-    /* ============================================================ */
-    /* ANSWER OPTIONS: Clickable rows with letter + text + audio     */
-    /* ============================================================ */
     .option { background: #f5f5f5; padding: 11px; border-radius: 10px; margin: 7px 0; cursor: pointer; display: flex; align-items: center; min-height: 50px; border: 2px solid transparent; }
     .option:hover { background: #e3f2fd; }
-
-    /* ============================================================ */
-    /* OPTION STATES: Visual feedback after user selects answer      */
-    /* .selected = user picked this one                              */
-    /* .correct = this is the right answer (practice mode only)      */
-    /* .wrong = user picked wrong answer (practice mode only)        */
-    /* ============================================================ */
     .selected { background: #dce6ff !important; border: 2px solid #667eea; }
     .correct { background: #c8e6c9 !important; }
     .wrong { background: #ffcdd2 !important; }
-
-    /* ============================================================ */
-    /* OPTION LETTER CIRCLE: A, B, C, D in a dark blue circle        */
-    /* ============================================================ */
     .opt-letter { background: #1e3c72; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-weight: bold; flex-shrink: 0; }
     .opt-text { flex: 1; }
-
-    /* ============================================================ */
-    /* OPTION AUDIO BUTTON: Small orange circle to play option audio   */
-    /* event.stopPropagation() prevents triggering parent click       */
-    /* ============================================================ */
     .opt-audio { background: #ff9800; color: white; border: none; width: 36px; height: 36px; min-width: 36px; border-radius: 50%; cursor: pointer; margin-left: 8px; padding: 0; font-size: 16px; }
-
-    /* ============================================================ */
-    /* FEEDBACK BOX: Shows correct/wrong + Somali explanation        */
-    /* Hidden by default, shown after answering in practice mode     */
-    /* ============================================================ */
     .feedback { display: none; padding: 12px; border-radius: 10px; margin-top: 12px; text-align: center; }
     .feedback.show { display: block; }
     .feedback.correct { background: #c8e6c9; color: #2e7d32; }
     .feedback.wrong { background: #ffcdd2; color: #c62828; }
     .feedback.neutral { background: #eef3ff; color: #1e3c72; }
     .feedback p { font-size: 15px; line-height: 1.45; margin-top: 8px; }
-
-    /* ============================================================ */
-    /* QUIZ BUTTONS CONTAINER: Holds Next / Finish buttons            */
-    /* ============================================================ */
     #quizButtons { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-
-    /* ============================================================ */
-    /* RESULTS SCREEN: Score circle (pass = green, fail = red)         */
-    /* ============================================================ */
     .score-circle { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; color: white; }
     .pass { background: #4caf50; }
     .fail { background: #f44336; }
-
-    /* ============================================================ */
-    /* CATEGORY BREAKDOWN: Per-category score cards on results page    */
-    /* ============================================================ */
     .cat-result { background: #f5f5f5; padding: 12px; margin: 8px 0; border-radius: 8px; text-align: left; }
     .cat-name { font-weight: bold; color: #1e3c72; margin-bottom: 5px; }
     .cat-stats { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
-
-    /* ============================================================ */
-    /* WATERMARK: Subtle bottom-right text "Fynah Theory Learning"   */
-    /* pointer-events: none = doesn't block clicks underneath          */
-    /* ============================================================ */
     .watermark { position: fixed; bottom: 5px; right: 5px; opacity: 0.3; font-size: 10px; color: white; pointer-events: none; }
   </style>
 <base target="_blank">
 </head>
 <body>
-  <!-- ============================================================ -->
-  <!-- WATERMARK: Fixed position brand mark, bottom-right corner    -->
-  <!-- ============================================================ -->
   <div class="watermark">Fynah Theory Learning</div>
 
-  <!-- ============================================================ -->
-  <!-- MAIN CONTAINER: All screens live inside this centered wrapper  -->
-  <!-- ============================================================ -->
   <div class="container">
-
-    <!-- ========================================================== -->
-    <!-- SCREEN 1: LOGIN                                              -->
-    <!-- Asks for username + password. Correct: fynah / Fynah2026!  -->
-    <!-- Only screen with .active class by default (first to show)      -->
-    <!-- ========================================================== -->
     <div id="login" class="screen active">
       <div class="login-box">
         <h1>Fynah Theory Learning</h1>
         <p style="color:#666; margin-bottom:12px;">Ireland Driving Theory — Somali Audio</p>
-        <!-- Username input field -->
         <input type="text" id="usernameInput" placeholder="Username" autocomplete="off" />
-        <!-- Password input field -->
         <input type="password" id="passwordInput" placeholder="Password" autocomplete="off" />
-        <!-- Login button triggers doLogin() function -->
         <button onclick="doLogin()">ENTER</button>
-        <!-- Error message shown when credentials are wrong -->
         <p id="loginError" class="error">Invalid username or password</p>
       </div>
     </div>
 
-    <!-- ========================================================== -->
-    <!-- SCREEN 2: HOME / MODE SELECTION                              -->
-    <!-- Shown after successful login. Two mode choices:              -->
-    <!--   1. Practice Mode - study by category with explanations     -->
-    <!--   2. Test Mode - 10 random questions, timed, no hints        -->
-    <!-- ========================================================== -->
     <div id="home" class="screen">
       <h1 class="home-title">Choose Mode</h1>
-      <!-- Practice Mode card -->
       <div class="mode-btn" onclick="enterPracticeMode()">
         <h2>Practice Mode</h2>
         <p>Choose a category first. Shows answer and Somali explanation.</p>
       </div>
-      <!-- Test Mode card -->
       <div class="mode-btn" onclick="startTestMode()">
         <h2>Test Mode</h2>
         <p>10 mixed questions. Answers shown only at the end.</p>
       </div>
     </div>
 
-    <!-- ========================================================== -->
-    <!-- SCREEN 3: CATEGORY SELECTION (Practice Mode only)              -->
-    <!-- Dynamically populated by renderCategoryButtons() from JS     -->
-    <!-- Shows 5 categories with question counts                      -->
-    <!-- ========================================================== -->
     <div id="categorySelect" class="screen">
       <h1 class="category-title">Choose Category</h1>
-      <!-- Buttons injected here by JavaScript -->
       <div id="categoryButtons"></div>
       <button onclick="goHome()">Back Home</button>
     </div>
 
-    <!-- ========================================================== -->
-    <!-- SCREEN 4: QUIZ / QUESTION DISPLAY                              -->
-    <!-- Core screen: shows question, image, options, feedback, timer   -->
-    <!-- Used by BOTH Practice Mode and Test Mode                     -->
-    <!-- ========================================================== -->
     <div id="quiz" class="screen">
-      <!-- Quiz header: back arrow, question counter, countdown timer -->
       <div class="quiz-header">
         <span class="back" onclick="goHome()">←</span>
         <span id="qNum">Q 1/10</span>
         <span class="timer" id="timer">01:00</span>
       </div>
 
-      <!-- Question card: category badge, text, image, options, feedback -->
       <div class="q-card">
-        <!-- Category name pill (e.g. "Rules of the Road") -->
         <span class="cat" id="cat">Category</span>
-        <!-- The actual question text -->
         <div class="q-text" id="qText">Question</div>
-        <!-- Question image (hidden if no image property in JSON) -->
         <img id="qImage" class="q-image" src="" alt="Question image" />
 
-        <!-- Audio button: plays question text in Somali -->
         <div class="audio-wrap">
           <button class="audio-btn" onclick="playQuestion()">🔊 Question Audio</button>
         </div>
 
-        <!-- Answer options container (A, B, C, D injected by JS) -->
         <div id="options"></div>
 
-        <!-- Feedback area: shows correct/wrong + Somali explanation -->
         <div id="feedback" class="feedback">
           <h3 id="fbTitle"></h3>
           <p id="fbText"></p>
-          <!-- Navigation buttons: Next or Finish -->
           <div id="quizButtons">
             <button id="nextBtn" onclick="nextQ()">Next</button>
             <button id="finishBtn" onclick="finishTest()" style="display:none;">Finish Test</button>
@@ -281,33 +117,19 @@
       </div>
     </div>
 
-    <!-- ========================================================== -->
-    <!-- SCREEN 5: RESULTS                                            -->
-    <!-- Shows final score circle, pass/fail status, breakdown         -->
-    <!-- ========================================================== -->
     <div id="results" class="screen">
       <div class="q-card" style="text-align:center;">
-        <!-- Score circle: green if passed (80%+), red if failed -->
         <div class="score-circle" id="scoreCircle">0/10</div>
         <h2 id="rTitle">Done</h2>
         <p id="rMsg"></p>
-        <!-- Per-category stats injected here -->
         <div id="categoryResults" style="margin-top:18px;"></div>
       </div>
       <button onclick="goHome()">Home</button>
       <button onclick="location.reload()" style="margin-top:8px;">Restart</button>
     </div>
+  </div>
 
-  </div><!-- /.container -->
-
-  <!-- ============================================================ -->
-  <!-- JAVASCRIPT SECTION: All app logic, data, and interactivity     -->
-  <!-- ============================================================ -->
   <script>
-    // ==============================================================
-    // DATA: Category names mapped to codes used in questions JSON
-    // These match the "category" field in questions-full.json
-    // ==============================================================
     const categories = {
       CAT01: "Control of Vehicle",
       CAT02: "Rules of the Road",
@@ -316,131 +138,81 @@
       CAT05: "Technical Matters"
     };
 
-    // ==============================================================
-    // STATE VARIABLES: Track everything happening in the quiz
-    // ==============================================================
-    let questions = [];           // All questions loaded from JSON file
-    let mode = "";                // Current mode: "practice" or "test"
-    let currentQ = 0;             // Index of current question (0-based)
-    let timer = null;             // setInterval reference for countdown
-    let timeLeft = 60;            // Seconds remaining per question (test mode)
-    let answered = false;         // Has user answered current question?
-    let activeQuizQuestions = []; // Questions currently being shown
-    let userAnswers = [];         // User's selected answer index per question
-    let currentAudio = null;      // Active HTMLAudioElement for TTS playback
+    let questions = [];
+    let mode = "";
+    let currentQ = 0;
+    let timer = null;
+    let timeLeft = 60;
+    let answered = false;
+    let activeQuizQuestions = [];
+    let userAnswers = [];
+    let currentAudio = null;
 
-    // ==============================================================
-    // FUNCTION: loadQuestions()
-    // Purpose: Fetch questions-full.json from server on app startup
-    // Called once in window.onload()
-    // ==============================================================
     async function loadQuestions() {
       try {
-        // Fetch with no-cache to always get latest version
         const response = await fetch("questions-full.json", { cache: "no-store" });
-        // If file not found (404), throw error to catch block
         if (!response.ok) throw new Error("questions-full.json not found");
-        // Parse JSON array into questions variable
         questions = await response.json();
         console.log("Questions loaded:", questions.length);
       } catch (error) {
-        // Log error and alert user if JSON fails to load
         console.error(error);
         alert("Could not load questions-full.json. Check file name and upload location.");
       }
     }
 
-    // ==============================================================
-    // FUNCTION: show(id)
-    // Purpose: Switch between screens (login, home, quiz, results, etc.)
-    // Hides ALL .screen elements, then shows only the one matching id
-    // ==============================================================
     function show(id) {
       document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
       document.getElementById(id).classList.add("active");
     }
 
-    // ==============================================================
-    // FUNCTION: doLogin()
-    // Purpose: Validate username/password and grant access
-    // Hardcoded credentials: username = "fynah", password = "Fynah2026!"
-    // ==============================================================
     function doLogin() {
       const username = document.getElementById("usernameInput").value.trim();
       const password = document.getElementById("passwordInput").value;
 
       if (username === "fynah" && password === "Fynah2026!") {
-        // Hide error message and show home screen
         document.getElementById("loginError").style.display = "none";
         show("home");
       } else {
-        // Show red error text below login button
         document.getElementById("loginError").style.display = "block";
       }
     }
 
-    // ==============================================================
-    // EVENT LISTENERS: Allow pressing Enter key in login inputs
-    // Attaches keypress listener to both username and password fields
-    // ==============================================================
     ["usernameInput", "passwordInput"].forEach(id => {
       document.getElementById(id).addEventListener("keypress", e => {
         if (e.key === "Enter") doLogin();
       });
     });
 
-    // ==============================================================
-    // FUNCTION: enterPracticeMode()
-    // Purpose: Switch to Practice Mode, show category selection screen
-    // Validates that questions are loaded before proceeding
-    // ==============================================================
     function enterPracticeMode() {
-      // Guard: don't proceed if questions array is empty
       if (!questions.length) {
         alert("Questions are not loaded yet.");
         return;
       }
       mode = "practice";
-      // Build category buttons dynamically
       renderCategoryButtons();
       show("categorySelect");
     }
 
-    // ==============================================================
-    // FUNCTION: renderCategoryButtons()
-    // Purpose: Create one button per category showing question count
-    // Each button calls choosePracticeCategory(key) when clicked
-    // ==============================================================
     function renderCategoryButtons() {
       const box = document.getElementById("categoryButtons");
-      box.innerHTML = ""; // Clear any existing buttons
+      box.innerHTML = "";
 
-      // Loop through each category in the categories object
       for (const key in categories) {
-        // Count how many questions belong to this category
         const count = questions.filter(q => q.category === key).length;
         const btn = document.createElement("button");
         btn.className = "category-btn";
         btn.textContent = categories[key] + " (" + count + ")";
-        // Click handler: start quiz for this specific category
         btn.onclick = () => choosePracticeCategory(key);
         box.appendChild(btn);
       }
     }
 
-    // ==============================================================
-    // FUNCTION: choosePracticeCategory(categoryKey)
-    // Purpose: Filter questions by selected category and start quiz
-    // ==============================================================
     function choosePracticeCategory(categoryKey) {
-      // Filter full question list to only this category
       activeQuizQuestions = questions.filter(q => q.category === categoryKey);
-      // Guard: show alert if category has zero questions
       if (!activeQuizQuestions.length) {
         alert("No questions found for this category.");
         return;
       }
-      // Initialize empty answers array (null = unanswered)
       userAnswers = new Array(activeQuizQuestions.length).fill(null);
       currentQ = 0;
       answered = false;
@@ -448,13 +220,7 @@
       loadQ();
     }
 
-    // ==============================================================
-    // FUNCTION: startTestMode()
-    // Purpose: Start Test Mode with 10 random questions from all cats
-    // Timer enabled. No explanations shown until end.
-    // ==============================================================
     function startTestMode() {
-      // Guard: don't start if questions not loaded
       if (!questions.length) {
         alert("Questions are not loaded yet.");
         return;
@@ -462,21 +228,13 @@
       mode = "test";
       currentQ = 0;
       answered = false;
-      // Shuffle all questions randomly, then take first 10
       activeQuizQuestions = [...questions].sort(() => Math.random() - 0.5).slice(0, 10);
       userAnswers = new Array(activeQuizQuestions.length).fill(null);
       show("quiz");
       loadQ();
     }
 
-    // ==============================================================
-    // FUNCTION: loadQ()
-    // Purpose: Render the current question on screen
-    // Handles: text, image, options, timer, feedback reset
-    // This is the HEART of the quiz display logic
-    // ==============================================================
     function loadQ() {
-      // Guard: if somehow no questions loaded, go home
       if (!activeQuizQuestions.length) {
         alert("No questions found.");
         goHome();
@@ -484,25 +242,18 @@
       }
 
       const q = activeQuizQuestions[currentQ];
-      // Check if user already answered this question (for back/forth)
       answered = userAnswers[currentQ] !== null;
 
-      // Update question counter text: "Q 3/10"
       document.getElementById("qNum").textContent =
         "Q " + (currentQ + 1) + "/" + activeQuizQuestions.length;
 
-      // Show category name (e.g. "Rules of the Road")
       document.getElementById("cat").textContent = categories[q.category] || q.category;
-      // Show question text
       document.getElementById("qText").textContent = q.questionEnglish;
 
-      // Handle question image (if present in JSON)
       const qImage = document.getElementById("qImage");
       if (q.image && q.image.trim() !== "") {
-        // Images stored in assets/images/ folder
         qImage.src = "assets/images/" + q.image;
         qImage.style.display = "block";
-        // If image fails to load, hide it (prevents broken image icon)
         qImage.onerror = function () {
           qImage.style.display = "none";
         };
@@ -511,43 +262,31 @@
         qImage.style.display = "none";
       }
 
-      // Reset feedback area to hidden/empty state
       resetFeedback();
 
-      // TEST MODE ONLY: Start 60-second countdown timer
       if (mode === "test") {
         timeLeft = 60;
         document.getElementById("timer").style.display = "inline";
         startTimer();
       } else {
-        // Practice mode: no timer
         clearInterval(timer);
         document.getElementById("timer").style.display = "none";
       }
 
-      // Build answer option HTML (A, B, C, D)
       let html = "";
       q.optionsEnglish.forEach((opt, i) => {
         html += '<div class="option" onclick="selectAnswer(' + i + ')">';
         html += '<div class="opt-letter">' + String.fromCharCode(65 + i) + '</div>';
         html += '<div class="opt-text">' + opt + '</div>';
-        // Audio button per option (plays Somali audio for that option)
         html += '<button class="opt-audio" onclick="event.stopPropagation(); playOpt(' + i + ')">🔊</button>';
         html += '</div>';
       });
 
       document.getElementById("options").innerHTML = html;
-      // Apply visual selection states (if user already answered this Q)
       updateOptionSelection();
-      // Show/hide Next/Finish buttons based on state
       updateActionButtons();
     }
 
-    // ==============================================================
-    // FUNCTION: resetFeedback()
-    // Purpose: Hide feedback box and clear its content
-    // Called at start of every new question
-    // ==============================================================
     function resetFeedback() {
       const fb = document.getElementById("feedback");
       fb.className = "feedback";
@@ -556,38 +295,54 @@
       document.getElementById("fbText").innerHTML = "";
     }
 
-    // ==============================================================
-    // TEST TIMER SYSTEM
-    // Controls the 60-second countdown during Test Mode.
-    // When timer reaches 00:00: auto-finishes the test.
-    // Unanswered questions are counted as wrong in results.
-    // ==============================================================
-    function startTimer() {
-      // Stop any existing timer before starting fresh
+     // ==========================================
+// TEST TIMER SYSTEM
+// ==========================================
+// This function controls the countdown timer
+// during Test Mode.
+//
+// How it works:
+// 1. Starts timer
+// 2. Reduces time every second
+// 3. Updates screen timer
+// 4. When timer reaches 00:00:
+//    - Stops timer
+//    - Automatically finishes test
+//    - Opens results page
+//
+// NOTE:
+// Any unanswered questions are counted wrong.
+// ==========================================
+function startTimer() {
+
+  // Stop old timer before starting new one
+  clearInterval(timer);
+
+  // Show timer immediately
+  updateTimer();
+
+  // Start countdown every 1 second
+  timer = setInterval(() => {
+
+    // Reduce time by 1 second
+    timeLeft--;
+
+    // Update timer on screen
+    updateTimer();
+
+    // If timer reaches zero
+    if (timeLeft <= 0) {
+
+      // Stop timer
       clearInterval(timer);
-      // Display initial time immediately
-      updateTimer();
-      // Start countdown: tick every 1000ms (1 second)
-      timer = setInterval(() => {
-        // Decrement remaining time
-        timeLeft--;
-        // Refresh timer display
-        updateTimer();
-        // If time runs out...
-        if (timeLeft <= 0) {
-          // Stop the timer
-          clearInterval(timer);
-          // Auto-submit and show results
-          finishTest();
-        }
-      }, 1000);
+
+      // Automatically finish the test
+      finishTest();
     }
 
-    // ==============================================================
-    // FUNCTION: updateTimer()
-    // Purpose: Format timeLeft as MM:SS and update DOM element
-    // Example: 65 seconds → "01:05", 9 seconds → "00:09"
-    // ==============================================================
+  }, 1000);
+}
+
     function updateTimer() {
       const m = Math.floor(timeLeft / 60);
       const s = timeLeft % 60;
@@ -595,52 +350,29 @@
         (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
     }
 
-    // ==============================================================
-    // FUNCTION: selectAnswer(idx)
-    // Purpose: Handle user clicking an answer option
-    // idx = 0 for A, 1 for B, 2 for C, 3 for D
-    // Behavior differs between Practice and Test modes:
-    //   - Practice: shows correct/wrong + Somali explanation immediately
-    //   - Test: records answer, shows neutral feedback, enables Next
-    // ==============================================================
     function selectAnswer(idx) {
       const q = activeQuizQuestions[currentQ];
-      // Store user's answer in the answers array
       userAnswers[currentQ] = idx;
       answered = true;
 
       if (mode === "practice") {
-        // Check if selected answer matches correct answer index
         const correct = idx === q.answer;
-        // Apply green/red styling to options
         updateOptionSelection();
-        // Show feedback box with explanation
         showPracticeFeedback(correct, q);
       } else {
-        // Test mode: just record and enable navigation
         updateOptionSelection();
         updateActionButtons();
       }
     }
 
-    // ==============================================================
-    // FUNCTION: updateOptionSelection()
-    // Purpose: Apply CSS classes to options based on state
-    // .selected = user picked this
-    // .correct = this is the right answer (practice mode reveal)
-    // .wrong = user picked wrong (practice mode reveal)
-    // ==============================================================
     function updateOptionSelection() {
       const selectedIndex = userAnswers[currentQ];
       const q = activeQuizQuestions[currentQ];
 
       document.querySelectorAll(".option").forEach((opt, i) => {
-        // Reset all classes first
         opt.classList.remove("selected", "correct", "wrong");
-        // Mark user's selection
         if (selectedIndex === i) opt.classList.add("selected");
 
-        // Practice mode only: reveal correct vs wrong answers
         if (mode === "practice" && selectedIndex !== null) {
           if (i === q.answer) opt.classList.add("correct");
           else if (i === selectedIndex) opt.classList.add("wrong");
@@ -648,108 +380,68 @@
       });
     }
 
-    // ==============================================================
-    // FUNCTION: showPracticeFeedback(correct, q)
-    // Purpose: Display feedback box in Practice Mode
-    // Shows: "Correct!" or "Wrong!" + correct answer + Somali explanation
-    // ==============================================================
     function showPracticeFeedback(correct, q) {
       const fb = document.getElementById("feedback");
-      // Set background color: green for correct, red for wrong
       fb.className = "feedback show " + (correct ? "correct" : "wrong");
 
       const title = document.getElementById("fbTitle");
       const text = document.getElementById("fbText");
 
-      // Make title and text visible
       title.style.display = "block";
       text.style.display = "block";
 
-      // Set title text
       title.textContent = correct ? "Correct!" : "Wrong!";
-      // Build explanation HTML: correct answer + Somali text
       text.innerHTML =
         "<strong>Correct Answer:</strong> " +
         q.optionsEnglish[q.answer] +
         "<br><br>" +
         (q.explanationSomali || "");
 
-      // Update which buttons are visible
       updateActionButtons();
     }
 
-    // ==============================================================
-    // FUNCTION: updateActionButtons()
-    // Purpose: Show/hide Next and Finish buttons based on state
-    // Practice: shows Next only after answering
-    // Test: shows Next (or Finish on last question) after answering
-    // ==============================================================
     function updateActionButtons() {
       const feedback = document.getElementById("feedback");
       const nextBtn = document.getElementById("nextBtn");
       const finishBtn = document.getElementById("finishBtn");
 
-      // Hide both by default
       nextBtn.style.display = "none";
       finishBtn.style.display = "none";
 
-      // PRACTICE MODE LOGIC
       if (mode === "practice") {
-        // Only show Next after user has answered
         if (answered) nextBtn.style.display = "inline-block";
-        return; // Exit early — practice mode done
+        return;
       }
 
-      // TEST MODE LOGIC
       if (mode === "test") {
-        // Hide title/text in test mode (no explanations until end)
         document.getElementById("fbTitle").style.display = "none";
         document.getElementById("fbText").style.display = "none";
 
         if (userAnswers[currentQ] !== null) {
-          // User answered: show neutral feedback box + navigation
           feedback.className = "feedback show neutral";
-          // Last question? Show Finish. Otherwise show Next.
           if (currentQ === activeQuizQuestions.length - 1) {
             finishBtn.style.display = "inline-block";
           } else {
             nextBtn.style.display = "inline-block";
           }
         } else {
-          // Not answered yet: hide feedback entirely
           feedback.className = "feedback";
         }
       }
     }
 
-    // ==============================================================
-    // FUNCTION: nextQ()
-    // Purpose: Advance to next question
-    // Stops timer, increments currentQ, calls loadQ() or showResults()
-    // ==============================================================
     function nextQ() {
       clearInterval(timer);
       currentQ++;
-      // If reached end of quiz, show results. Otherwise load next Q.
       if (currentQ >= activeQuizQuestions.length) showResults();
       else loadQ();
     }
 
-    // ==============================================================
-    // FUNCTION: finishTest()
-    // Purpose: End the quiz and jump to results screen
-    // Called by: Finish button click OR timer running out
-    // ==============================================================
     function finishTest() {
       clearInterval(timer);
       showResults();
     }
 
-    // ==============================================================
-    // FUNCTION: showResults()
-    // Purpose: Calculate and display final score + category breakdown
-    // Pass threshold: 80% (e.g., 8/10 correct to pass)
-    // ==============================================================
     function showResults() {
       clearInterval(timer);
       stopCurrentAudio();
@@ -757,15 +449,11 @@
 
       const total = activeQuizQuestions.length;
       let score = 0;
-      // Object to store per-category stats
       const breakdown = {};
 
-      // Loop through all questions to calculate score
       activeQuizQuestions.forEach((q, i) => {
-        // Initialize category in breakdown if not exists
         if (!breakdown[q.category]) breakdown[q.category] = { correct: 0, total: 0 };
         breakdown[q.category].total++;
-        // If user's answer matches correct answer index, increment score
         if (userAnswers[i] === q.answer) {
           score++;
           breakdown[q.category].correct++;
@@ -773,19 +461,14 @@
       });
 
       const wrong = total - score;
-      // Pass if score is 80% or higher (ceil handles odd totals)
       const pass = score >= Math.ceil(total * 0.8);
 
-      // Update score circle text and color
       document.getElementById("scoreCircle").textContent = score + "/" + total;
       document.getElementById("scoreCircle").className = "score-circle " + (pass ? "pass" : "fail");
-      // Update pass/fail title
       document.getElementById("rTitle").textContent = pass ? "PASSED 🎉" : "FAILED ❌";
-      // Update summary text: Correct | Wrong | Total
       document.getElementById("rMsg").textContent =
         "Correct: " + score + " | Wrong: " + wrong + " | Total: " + total;
 
-      // Build category breakdown HTML
       let catHtml = '<h3 style="margin-bottom:15px;color:#1e3c72;">Category Breakdown</h3>';
 
       for (const cat in breakdown) {
@@ -803,21 +486,12 @@
       document.getElementById("categoryResults").innerHTML = catHtml;
     }
 
-    // ==============================================================
-    // FUNCTION: goHome()
-    // Purpose: Return to home screen, stop timer and audio
-    // ==============================================================
     function goHome() {
       clearInterval(timer);
       stopCurrentAudio();
       show("home");
     }
 
-    // ==============================================================
-    // FUNCTION: stopCurrentAudio()
-    // Purpose: Pause and reset any playing audio
-    // Prevents overlapping audio when switching questions/screens
-    // ==============================================================
     function stopCurrentAudio() {
       if (currentAudio) {
         currentAudio.pause();
@@ -825,56 +499,29 @@
       }
     }
 
-    // ==============================================================
-    // FUNCTION: playAudio(src)
-    // Purpose: Play an MP3 audio file (Somali TTS)
-    // Stops previous audio first, then plays new file
-    // Shows alert if audio file is missing
-    // ==============================================================
     function playAudio(src) {
       stopCurrentAudio();
       currentAudio = new Audio(src);
 
-      // If file doesn't exist, show user-friendly error
       currentAudio.onerror = function () {
-        alert("Audio file not found or cannot play:
-" + src);
+        alert("Audio file not found or cannot play:\n" + src);
       };
 
-      // Attempt to play (may fail on mobile without user interaction)
       currentAudio.play().catch(e => {
         console.log("Audio play failed:", e);
       });
     }
 
-    // ==============================================================
-    // FUNCTION: playQuestion()
-    // Purpose: Play Somali audio for the current QUESTION text
-    // Audio file naming: audio/q[ID]_question.mp3
-    // Example: question id 5 → audio/q5_question.mp3
-    // ==============================================================
     function playQuestion() {
       const q = activeQuizQuestions[currentQ];
       playAudio("audio/q" + q.id + "_question.mp3");
     }
 
-    // ==============================================================
-    // FUNCTION: playOpt(idx)
-    // Purpose: Play Somali audio for a specific ANSWER OPTION
-    // Audio file naming: audio/q[ID]_opt[INDEX].mp3
-    // Example: question 3, option B → audio/q3_opt1.mp3
-    // ==============================================================
     function playOpt(idx) {
       const q = activeQuizQuestions[currentQ];
       playAudio("audio/q" + q.id + "_opt" + idx + ".mp3");
     }
 
-    // ==============================================================
-    // APP INITIALIZATION
-    // Runs when page finishes loading
-    // 1. Load questions from JSON
-    // 2. Show login screen
-    // ==============================================================
     window.onload = async function () {
       await loadQuestions();
       show("login");
