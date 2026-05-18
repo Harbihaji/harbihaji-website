@@ -2,8 +2,8 @@
   {
     "id": 1,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 1",
-    "questionSomali": "Su'aal Tusaale 1",
+    "questionEnglish": "Safe Driving Question 1",
+    "questionSomali": "Su'aasha Wadista Badbaadada 1",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -18,13 +18,13 @@
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 2,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 2",
-    "questionSomali": "Su'aal Tusaale 2",
+    "questionEnglish": "Safe Driving Question 2",
+    "questionSomali": "Su'aasha Wadista Badbaadada 2",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -39,13 +39,13 @@
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 3,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 3",
-    "questionSomali": "Su'aal Tusaale 3",
+    "questionEnglish": "Safe Driving Question 3",
+    "questionSomali": "Su'aasha Wadista Badbaadada 3",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -60,13 +60,13 @@
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 4,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 4",
-    "questionSomali": "Su'aal Tusaale 4",
+    "questionEnglish": "Safe Driving Question 4",
+    "questionSomali": "Su'aasha Wadista Badbaadada 4",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -81,13 +81,13 @@
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 5,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 5",
-    "questionSomali": "Su'aal Tusaale 5",
+    "questionEnglish": "Safe Driving Question 5",
+    "questionSomali": "Su'aasha Wadista Badbaadada 5",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -102,13 +102,13 @@
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 6,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 6",
-    "questionSomali": "Su'aal Tusaale 6",
+    "questionEnglish": "Safe Driving Question 6",
+    "questionSomali": "Su'aasha Wadista Badbaadada 6",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -123,13 +123,13 @@
     ],
     "answer": 0,
     "image": "q6.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 7,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 7",
-    "questionSomali": "Su'aal Tusaale 7",
+    "questionEnglish": "Safe Driving Question 7",
+    "questionSomali": "Su'aasha Wadista Badbaadada 7",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -144,13 +144,13 @@
     ],
     "answer": 0,
     "image": "q7.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 8,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 8",
-    "questionSomali": "Su'aal Tusaale 8",
+    "questionEnglish": "Safe Driving Question 8",
+    "questionSomali": "Su'aasha Wadista Badbaadada 8",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -165,13 +165,13 @@
     ],
     "answer": 0,
     "image": "q8.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 9,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 9",
-    "questionSomali": "Su'aal Tusaale 9",
+    "questionEnglish": "Safe Driving Question 9",
+    "questionSomali": "Su'aasha Wadista Badbaadada 9",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -186,13 +186,13 @@
     ],
     "answer": 0,
     "image": "q9.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 10,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 10",
-    "questionSomali": "Su'aal Tusaale 10",
+    "questionEnglish": "Safe Driving Question 10",
+    "questionSomali": "Su'aasha Wadista Badbaadada 10",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -207,13 +207,13 @@
     ],
     "answer": 0,
     "image": "q10.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 11,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 11",
-    "questionSomali": "Su'aal Tusaale 11",
+    "questionEnglish": "Safe Driving Question 11",
+    "questionSomali": "Su'aasha Wadista Badbaadada 11",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -228,13 +228,13 @@
     ],
     "answer": 0,
     "image": "q11.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 12,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 12",
-    "questionSomali": "Su'aal Tusaale 12",
+    "questionEnglish": "Safe Driving Question 12",
+    "questionSomali": "Su'aasha Wadista Badbaadada 12",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -249,13 +249,13 @@
     ],
     "answer": 0,
     "image": "q12.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 13,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 13",
-    "questionSomali": "Su'aal Tusaale 13",
+    "questionEnglish": "Safe Driving Question 13",
+    "questionSomali": "Su'aasha Wadista Badbaadada 13",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -270,13 +270,13 @@
     ],
     "answer": 0,
     "image": "q13.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 14,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 14",
-    "questionSomali": "Su'aal Tusaale 14",
+    "questionEnglish": "Safe Driving Question 14",
+    "questionSomali": "Su'aasha Wadista Badbaadada 14",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -291,13 +291,13 @@
     ],
     "answer": 0,
     "image": "q14.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 15,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 15",
-    "questionSomali": "Su'aal Tusaale 15",
+    "questionEnglish": "Safe Driving Question 15",
+    "questionSomali": "Su'aasha Wadista Badbaadada 15",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -312,13 +312,13 @@
     ],
     "answer": 0,
     "image": "q15.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 16,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 16",
-    "questionSomali": "Su'aal Tusaale 16",
+    "questionEnglish": "Safe Driving Question 16",
+    "questionSomali": "Su'aasha Wadista Badbaadada 16",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -333,13 +333,13 @@
     ],
     "answer": 0,
     "image": "q16.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 17,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 17",
-    "questionSomali": "Su'aal Tusaale 17",
+    "questionEnglish": "Safe Driving Question 17",
+    "questionSomali": "Su'aasha Wadista Badbaadada 17",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -354,13 +354,13 @@
     ],
     "answer": 0,
     "image": "q17.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 18,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 18",
-    "questionSomali": "Su'aal Tusaale 18",
+    "questionEnglish": "Safe Driving Question 18",
+    "questionSomali": "Su'aasha Wadista Badbaadada 18",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -375,13 +375,13 @@
     ],
     "answer": 0,
     "image": "q18.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 19,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 19",
-    "questionSomali": "Su'aal Tusaale 19",
+    "questionEnglish": "Safe Driving Question 19",
+    "questionSomali": "Su'aasha Wadista Badbaadada 19",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -396,13 +396,13 @@
     ],
     "answer": 0,
     "image": "q19.png",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   },
   {
     "id": 20,
     "category": "CAT04",
-    "questionEnglish": "Sample Question 20",
-    "questionSomali": "Su'aal Tusaale 20",
+    "questionEnglish": "Safe Driving Question 20",
+    "questionSomali": "Su'aasha Wadista Badbaadada 20",
     "optionsEnglish": [
       "Correct answer",
       "Wrong answer 1",
@@ -417,6 +417,6 @@
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad kooban oo Somali ah."
+    "explanationSomali": "Sharaxaad Somali ah."
   }
 ]
