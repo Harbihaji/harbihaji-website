@@ -2,421 +2,421 @@
   {
     "id": 1,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 1",
-    "questionSomali": "Su'aasha Wadista Badbaadada 1",
+    "questionEnglish": "What should a driver do in situation 1?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 1?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 2,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 2",
-    "questionSomali": "Su'aasha Wadista Badbaadada 2",
+    "questionEnglish": "What should a driver do in situation 2?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 2?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 3,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 3",
-    "questionSomali": "Su'aasha Wadista Badbaadada 3",
+    "questionEnglish": "What should a driver do in situation 3?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 3?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 4,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 4",
-    "questionSomali": "Su'aasha Wadista Badbaadada 4",
+    "questionEnglish": "What should a driver do in situation 4?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 4?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 5,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 5",
-    "questionSomali": "Su'aasha Wadista Badbaadada 5",
+    "questionEnglish": "What should a driver do in situation 5?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 5?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 6,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 6",
-    "questionSomali": "Su'aasha Wadista Badbaadada 6",
+    "questionEnglish": "What should a driver do in situation 6?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 6?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q6.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 7,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 7",
-    "questionSomali": "Su'aasha Wadista Badbaadada 7",
+    "questionEnglish": "What should a driver do in situation 7?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 7?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q7.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 8,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 8",
-    "questionSomali": "Su'aasha Wadista Badbaadada 8",
+    "questionEnglish": "What should a driver do in situation 8?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 8?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q8.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 9,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 9",
-    "questionSomali": "Su'aasha Wadista Badbaadada 9",
+    "questionEnglish": "What should a driver do in situation 9?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 9?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q9.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 10,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 10",
-    "questionSomali": "Su'aasha Wadista Badbaadada 10",
+    "questionEnglish": "What should a driver do in situation 10?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 10?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q10.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 11,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 11",
-    "questionSomali": "Su'aasha Wadista Badbaadada 11",
+    "questionEnglish": "What should a driver do in situation 11?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 11?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q11.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 12,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 12",
-    "questionSomali": "Su'aasha Wadista Badbaadada 12",
+    "questionEnglish": "What should a driver do in situation 12?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 12?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q12.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 13,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 13",
-    "questionSomali": "Su'aasha Wadista Badbaadada 13",
+    "questionEnglish": "What should a driver do in situation 13?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 13?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q13.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 14,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 14",
-    "questionSomali": "Su'aasha Wadista Badbaadada 14",
+    "questionEnglish": "What should a driver do in situation 14?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 14?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q14.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 15,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 15",
-    "questionSomali": "Su'aasha Wadista Badbaadada 15",
+    "questionEnglish": "What should a driver do in situation 15?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 15?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q15.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 16,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 16",
-    "questionSomali": "Su'aasha Wadista Badbaadada 16",
+    "questionEnglish": "What should a driver do in situation 16?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 16?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q16.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 17,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 17",
-    "questionSomali": "Su'aasha Wadista Badbaadada 17",
+    "questionEnglish": "What should a driver do in situation 17?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 17?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q17.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 18,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 18",
-    "questionSomali": "Su'aasha Wadista Badbaadada 18",
+    "questionEnglish": "What should a driver do in situation 18?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 18?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q18.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 19,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 19",
-    "questionSomali": "Su'aasha Wadista Badbaadada 19",
+    "questionEnglish": "What should a driver do in situation 19?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 19?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "q19.png",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   },
   {
     "id": 20,
     "category": "CAT04",
-    "questionEnglish": "Safe Driving Question 20",
-    "questionSomali": "Su'aasha Wadista Badbaadada 20",
+    "questionEnglish": "What should a driver do in situation 20?",
+    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 20?",
     "optionsEnglish": [
-      "Correct answer",
-      "Wrong answer 1",
-      "Wrong answer 2",
-      "Wrong answer 3"
+      "Correct safe action",
+      "Unsafe action 1",
+      "Unsafe action 2",
+      "Unsafe action 3"
     ],
     "optionsSomali": [
-      "Jawaabta saxda ah",
-      "Jawaab khaldan 1",
-      "Jawaab khaldan 2",
-      "Jawaab khaldan 3"
+      "Falka saxda ah",
+      "Fal khaldan 1",
+      "Fal khaldan 2",
+      "Fal khaldan 3"
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Sharaxaad Somali ah."
+    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
   }
 ]
