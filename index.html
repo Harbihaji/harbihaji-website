@@ -510,20 +510,27 @@
       document.getElementById("qText").textContent =
         q.questionEnglish;
 
-      // Load image if available
+      // ==========================================
+      // IMAGE BLOCK - REPLACED WITH YOUR CODE
+      // ==========================================
       const qImage = document.getElementById("qImage");
 
-      if (q.image && q.image.trim() !== "") {
-        qImage.src = "assets/images/" + q.image;
-        qImage.style.display = "block";
+      if (q.image && q.image !== "") {
 
-        // If image file is missing, hide image
-        qImage.onerror = function () {
-          qImage.style.display = "none";
-        };
+          qImage.src = "assets/images/" + q.image;
+
+          qImage.style.display = "block";
+
+          qImage.onerror = function () {
+              console.log("Image not found:", qImage.src);
+              qImage.style.display = "none";
+          };
+
       } else {
-        qImage.src = "";
-        qImage.style.display = "none";
+
+          qImage.style.display = "none";
+          qImage.src = "";
+
       }
 
       resetFeedback();
