@@ -2,421 +2,421 @@
   {
     "id": 1,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 1?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 1?",
+    "questionEnglish": "Why might it be dangerous to drive on a poorly-lit street?",
+    "questionSomali": "Maxay khatar u noqon kartaa in lagu wado waddo iftiinkeedu liito?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Pedestrians crossing in a dark area might be difficult to see.",
+      "Drivers can only see the traffic in front of them.",
+      "Drivers can only see traffic coming against them.",
+      "The road surface will always be slippery."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Dadka lugaynaya ee meel mugdi ah ka gudbaya way adkaan kartaa in la arko.",
+      "Darawalku wuxuu arki karaa oo keliya gaadiidka hortiisa yaal.",
+      "Darawalku wuxuu arki karaa oo keliya gaadiidka ka imanaya dhanka kale.",
+      "Waddadu mar walba way simbiriirixanaysaa."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Waddo iftiinkeedu liito waxay adkeyn kartaa in la arko dadka lugaynaya, sidaas darteed waa in si taxaddar leh loo wado."
   },
   {
     "id": 2,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 2?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 2?",
+    "questionEnglish": "Why might it be dangerous to drive on a poorly-lit street?",
+    "questionSomali": "Maxay khatar u noqon kartaa in lagu wado waddo iftiinkeedu liito?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "It may be difficult to see poorly lit vehicles in dark areas.",
+      "Traffic lights will not be working.",
+      "Drivers can only see the traffic in front of them.",
+      "Drivers can only see traffic coming against them."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Way adkaan kartaa in la arko gaadiid aan si fiican u iftiimin oo ku jira meel mugdi ah.",
+      "Nalalka taraafikadu ma shaqayn doonaan.",
+      "Darawalku wuxuu arki karaa oo keliya gaadiidka hortiisa yaal.",
+      "Darawalku wuxuu arki karaa oo keliya gaadiidka ka imanaya dhanka kale."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Gaadiid aan nalal fiican lahayn ayaa ku adkaan kara in la arko habeenkii ama meelaha mugdiga ah."
   },
   {
     "id": 3,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 3?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 3?",
+    "questionEnglish": "What should a driver do if dazzled by the lights of an oncoming vehicle?",
+    "questionSomali": "Maxaa la sameeyaa haddii nalalka gaari kaa soo horjeeda ay indhaha kaa qabtaan?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Look to the left-hand edge of the road and slow down if necessary.",
+      "Accelerate to get out of the light quickly.",
+      "Flash the oncoming vehicle and move left.",
+      "Close your eyes briefly until the vehicle passes."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Eeg dhinaca bidix ee waddada oo xawaaraha yaree haddii loo baahdo.",
+      "Xawaaraha kordhi si aad si degdeg ah uga baxdo nalka.",
+      "Nalalka u shid gaariga kaa soo horjeeda oo bidix u leexo.",
+      "Indhaha xir muddo gaaban ilaa gaarigu dhaafo."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Haddii nalalka kaa indho tiraan, eeg dhinaca bidix ee waddada oo si tartiib ah u soco si aad u ilaaliso xakamaynta."
   },
   {
     "id": 4,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 4?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 4?",
+    "questionEnglish": "When should signals be given to other road users?",
+    "questionSomali": "Goorma ayaa calaamadaha sida indicators-ka loo siinayaa dadka kale ee waddada isticmaala?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Clearly and in good time to show what you intend to do.",
+      "Only when it is necessary to warn following traffic.",
+      "Only when turning at busy junctions.",
+      "Only after you have started the manoeuvre."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Si cad iyo waqti fiican ah si loo muujiyo waxa aad damacsan tahay.",
+      "Kaliya marka loo baahan yahay in la digo gaadiidka kaa dambeeya.",
+      "Kaliya markaad ka leexanayso isgoysyo mashquul ah.",
+      "Kaliya kadib markaad bilowdo dhaqaaqa."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Calaamadaha waa in la bixiyo si cad oo waqti fiican ah si dadka kale u fahmaan waxa aad samaynayso."
   },
   {
     "id": 5,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 5?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 5?",
+    "questionEnglish": "Is a driver permitted to pick up or set down a passenger on a motorway?",
+    "questionSomali": "Ma loo oggol yahay darawal inuu rakaab ka qaado ama ka dejiyo motorway?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "A driver is never permitted to pick up or set down passengers on a motorway.",
+      "It is permitted if the driver stops on the hard shoulder.",
+      "It is only permitted within 200 metres of a slip road.",
+      "It is permitted during daylight hours only."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Darawal looma oggola inuu rakaab ka qaado ama ka dejiyo motorway.",
+      "Waa la oggol yahay haddii uu ku istaago hard shoulder-ka.",
+      "Waa la oggol yahay oo keliya meel 200 mitir u jirta slip road.",
+      "Waa la oggol yahay oo keliya maalintii."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Motorway-ga looma isticmaalo qaadista ama dejinta rakaabka, sababtoo ah waa khatar aad u weyn."
   },
   {
     "id": 6,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 6?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 6?",
+    "questionEnglish": "An approaching driver sees a boy on a bicycle saying goodbye to his friend. What should the driver do?",
+    "questionSomali": "Darawal soo dhowaanaya wuxuu arkay wiil baaskiil wata oo saaxiibkii macsalaamaynaya. Maxaa la sameeyaa?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Be prepared for the boy to move off at any moment.",
+      "Slow down and beckon the boy to cross the road.",
+      "Stop until the boy has moved off.",
+      "Proceed normally because the boy is on the footpath."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "U diyaar garow in wiilku dhaqaaqo waqti kasta.",
+      "Xawaaraha yaree oo wiilka u tilmaam inuu waddada gooyo.",
+      "Istaag ilaa wiilku dhaqaaqo.",
+      "Si caadi ah u wad sababtoo ah wiilku wuxuu joogaa footpath-ka."
     ],
     "answer": 0,
     "image": "q6.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Carruurta si lama filaan ah ayay u dhaqaaqi karaan, sidaas darteed darawalku waa inuu diyaar u ahaadaa inuu joojiyo."
   },
   {
     "id": 7,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 7?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 7?",
+    "questionEnglish": "What must a driver be prepared for when children are playing near a ball on the road?",
+    "questionSomali": "Maxaa darawalku u diyaar garoobayaa marka carruur ay kubbad ku ciyaarayaan agagaarka waddada?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "A child could turn back to collect the ball from the roadway.",
+      "The ball may burst after the vehicle passes.",
+      "The oncoming vehicle may swerve in your direction.",
+      "The ball could damage your vehicle."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Ilmo ayaa dib ugu noqon kara inuu kubbadda ka soo qaato waddada.",
+      "Kubbaddu way qarxi kartaa kadib marka gaarigu dhaafo.",
+      "Gaariga kaa soo horjeeda ayaa dhinacaaga u leexan kara.",
+      "Kubbaddu waxay dhaawici kartaa gaarigaaga."
     ],
     "answer": 0,
     "image": "q7.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Carruurtu waxay si lama filaan ah ugu ordi karaan waddada si ay kubbad u soo qaataan, sidaas darteed waa in si taxaddar leh loo wado."
   },
   {
     "id": 8,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 8?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 8?",
+    "questionEnglish": "When approaching a pedestrian crossing, what should the driver do?",
+    "questionSomali": "Marka darawalku ku dhow yahay pedestrian crossing, maxaa la sameeyaa?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Slow down in good time and be prepared to stop.",
+      "Maintain speed because pedestrians have not stepped onto the crossing.",
+      "Continue quickly because pedestrians must wait.",
+      "Sound the horn to warn pedestrians to stay back."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Xawaaraha waqti fiican ku yaree oo diyaar u noqo inaad istaagto.",
+      "Xawaaraha sii wad sababtoo ah dadka lugaynaya weli ma aysan gelin crossing-ka.",
+      "Si degdeg ah u sii wad sababtoo ah dadka lugaynaya waa inay sugaan.",
+      "Horn-ka isticmaal si aad dadka lugaynaya uga digto inay dib u joogaan."
     ],
     "answer": 0,
     "image": "q8.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Markaad u dhowdahay pedestrian crossing, waa inaad xawaaraha yareysaa oo diyaar u noqotaa inaad istaagto."
   },
   {
     "id": 9,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 9?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 9?",
+    "questionEnglish": "What should the driver do if there are children playing at the edge of the road?",
+    "questionSomali": "Maxaa darawalku sameeyaa haddii carruur ku ciyaarayaan geeska waddada?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Reduce speed, drive cautiously and remain ready to brake.",
+      "Give a warning signal and drive past at the same speed.",
+      "Accelerate and move to the right-hand side of the road.",
+      "Drive closer to the kerb to pass them quickly."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Xawaaraha yaree, si taxaddar leh u wad, oo diyaar u noqo inaad biriig qabato.",
+      "Calaamad digniin ah bixi oo isla xawaaraha ku dhaaf.",
+      "Xawaaraha kordhi oo u dhaqaaq dhinaca midig ee waddada.",
+      "Ku dhowow kerb-ka si aad si degdeg ah u dhaafto."
     ],
     "answer": 0,
     "image": "q9.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Carruurtu si lama filaan ah ayay u geli karaan waddada, sidaas darteed waa in si tartiib ah oo feejignaan leh loo wado."
   },
   {
     "id": 10,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 10?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 10?",
+    "questionEnglish": "What should a driver be conscious of when passing a stopped bus?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka uu dhaafayo bas istaagay?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "People may cross the street at the rear of the bus.",
+      "Traffic may only emerge from the street on the left.",
+      "The bus may start to reverse.",
+      "The bus driver will always signal before moving off."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Dad ayaa laga yaabaa inay waddada ka gooyaan gadaasha baska.",
+      "Gaadiidku wuxuu ka imaan karaa oo keliya waddada bidixda.",
+      "Basku wuxuu bilaabi karaa inuu gadaal u socdo.",
+      "Darawalka baska mar walba wuu calaamadayn doonaa ka hor dhaqaaq."
     ],
     "answer": 0,
     "image": "q10.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Dadku waxay si lama filaan ah uga soo bixi karaan gadaasha baska, sidaas darteed waa in la feejignaado."
   },
   {
     "id": 11,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 11?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 11?",
+    "questionEnglish": "A silver car is overtaking a parked red car. What should the driver do?",
+    "questionSomali": "Gaariga silver-ka ah wuxuu dhaafayaa gaari cas oo taagan. Maxaa darawalku sameeyaa?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Reduce speed considerably and be ready to stop.",
+      "Drive on at the same speed.",
+      "Drive on if you do not hit the ball.",
+      "Move closer to the parked red car."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Xawaaraha si weyn u yaree oo diyaar u noqo inaad istaagto.",
+      "Isla xawaaraha ku sii wad.",
+      "Sii wad haddii aadan kubbadda ku dhicin.",
+      "U dhowow gaariga cas ee taagan."
     ],
     "answer": 0,
     "image": "q11.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Marka xaaladdu cidhiidhi tahay ama carruur/kubbad la arko, waa in xawaaraha si weyn loo yareeyaa oo diyaar loo ahaadaa istaag."
   },
   {
     "id": 12,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 12?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 12?",
+    "questionEnglish": "What should a driver be aware of near a pedestrian waiting on a traffic island?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka qof lugaynaya ku sugayo traffic island?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "The pedestrian may leave the traffic island without paying attention.",
+      "A tram may move away without warning.",
+      "There is no danger because the tram is on rails.",
+      "The pedestrian always has priority to cross in front of traffic."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Qofka lugaynaya wuxuu ka tagi karaa traffic island-ka isagoo aan fiirin.",
+      "Tram ayaa dhaqaaqi kara digniin la’aan.",
+      "Khatar ma jirto sababtoo ah tram-ku wuxuu ku socdaa rails.",
+      "Qofka lugaynaya mar walba mudnaan ayuu leeyahay inuu gaadiidka hortiisa ka gooyo."
     ],
     "answer": 0,
     "image": "q12.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Qofka lugaynaya mararka qaar si lama filaan ah ayuu uga bixi karaa traffic island-ka, sidaas darteed darawalku waa inuu feejignaadaa."
   },
   {
     "id": 13,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 13?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 13?",
+    "questionEnglish": "A driver is following two vehicles and wishes to overtake. What must the driver consider before overtaking?",
+    "questionSomali": "Darawal wuxuu raacayaa laba gaari wuxuuna doonayaa inuu dhaafo. Maxaa la tixgeliyaa ka hor dhaafidda?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "The driver’s field of view is not good enough to allow safe overtaking.",
+      "The road markings always forbid overtaking here.",
+      "The silver car may decide to turn right.",
+      "The driver should overtake both vehicles together."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Aragtida darawalka kuma filna dhaafid ammaan ah.",
+      "Calaamadaha waddadu mar walba way mamnuucayaan dhaafidda halkan.",
+      "Gaariga silver-ka ah wuxuu go’aansan karaa inuu midig u leexdo.",
+      "Darawalku waa inuu labada gaari hal mar wada dhaafo."
     ],
     "answer": 0,
     "image": "q13.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Dhaafid lama bilaabi karo haddii aragtidu aysan ku filnayn in si ammaan ah loo hubiyo waddada hore."
   },
   {
     "id": 14,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 14?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 14?",
+    "questionEnglish": "What should a driver be aware of when approaching a vehicle that is attempting to park?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka uu ku dhow yahay gaari isku dayaya inuu baarkimo?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "The vehicle being parked may move out without warning.",
+      "There may be a driveway where the vehicle is parking.",
+      "The vehicle may be parking in a loading area.",
+      "You may have to stop and assist the driver parking."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Gaariga la dhigayo wuxuu dhaqaaqi karaa digniin la’aan.",
+      "Waxaa jiri kara driveway meesha gaarigu dhigayo.",
+      "Gaarigu wuxuu ku baarkimi karaa goob loading ah.",
+      "Waxaa laga yaabaa inaad istaagto oo ka caawiso darawalka baarkinka."
     ],
     "answer": 0,
     "image": "q14.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Gaariga isku dayaya inuu baarkimo wuxuu si lama filaan ah u dhaqaaqi karaa, sidaas darteed waa in taxaddar la yeeshaa."
   },
   {
     "id": 15,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 15?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 15?",
+    "questionEnglish": "What should the driver be most conscious of in this situation?",
+    "questionSomali": "Maxaa darawalku ugu badan ka feejignaanayaa xaaladdan?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "The pedestrian may suddenly cross the road in front of the vehicle.",
+      "The pedestrian always has right of way to cross the road.",
+      "No vehicles should be parked on the left-hand side of the road.",
+      "One of the parked vehicles may reverse into the driver’s path."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Qofka lugaynaya wuxuu si lama filaan ah ugu gudbi karaa gaariga hortiisa.",
+      "Qofka lugaynaya mar walba xaq ayuu u leeyahay inuu waddada gooyo.",
+      "Gaadiid looma oggola inuu dhigo dhinaca bidix ee waddada.",
+      "Mid ka mid ah gaadiidka taagan ayaa gadaal ugu soo noqon kara jidka darawalka."
     ],
     "answer": 0,
     "image": "q15.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Dadku si lama filaan ah ayay u goyn karaan waddada, sidaas darteed darawalku waa inuu xawaaraha yareeyaa oo feejignaadaa."
   },
   {
     "id": 16,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 16?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 16?",
+    "questionEnglish": "What should a driver do when travelling behind this vehicle?",
+    "questionSomali": "Maxaa darawalku sameeyaa marka uu ka dambeeyo gaarigan?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Reduce speed and prepare to stop if necessary.",
+      "Overtake the vehicle in front.",
+      "Drive as close as possible to the vehicle.",
+      "Pass slowly by mounting the kerb on the left."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Xawaaraha yaree oo diyaar u noqo inaad istaagto haddii loo baahdo.",
+      "Dhaaf gaariga kaa horreeya.",
+      "U dhowow gaariga sida ugu badan ee suurtagal ah.",
+      "Si tartiib ah uga dhaaf adigoo kerb-ka bidix fuulaya."
     ],
     "answer": 0,
     "image": "q16.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Markaad ka dambeyso gaari kale, gaar ahaan mid kaa xannibaya aragtida, waa inaad xawaaraha yareysaa oo diyaar u ahaataa istaag."
   },
   {
     "id": 17,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 17?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 17?",
+    "questionEnglish": "What should a driver be aware of when passing a bus?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka uu dhaafayo bas?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "There may be a car hidden from view in front of the bus.",
+      "The bus may be parked at a terminus.",
+      "Only buses may use this road.",
+      "The bus will always remain stationary."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Waxaa jiri kara gaari ka qarsoon aragtida oo baska hortiisa yaal.",
+      "Basku wuxuu ku baarkimi karaa terminus.",
+      "Baska oo keliya ayaa isticmaali kara waddadan.",
+      "Basku mar walba wuu taagnaan doonaa."
     ],
     "answer": 0,
     "image": "q17.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Baska weyn wuxuu qarin karaa gaari ama qof kale, sidaas darteed darawalku waa inuu feejignaadaa."
   },
   {
     "id": 18,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 18?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 18?",
+    "questionEnglish": "When driving on a one-way street with vehicles parked on both sides, what should a driver be prepared for?",
+    "questionSomali": "Markaad ku wadayso waddo one-way ah oo gaadiid ka yaallaan labada dhinac, maxaad u diyaar garoobaysaa?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "A vehicle door may open on either side of the street.",
+      "Oncoming traffic may appear as you overtake the truck.",
+      "The truck may be a left-hand drive vehicle.",
+      "The road will always become wider ahead."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Albaab gaari ayaa ka furmi kara dhinac kasta oo waddada ah.",
+      "Gaadiid kaa soo horjeeda ayaa muuqan kara markaad truck-ga dhaafayso.",
+      "Truck-gu wuxuu noqon karaa left-hand drive.",
+      "Waddadu mar walba way ballaaran doontaa hore."
     ],
     "answer": 0,
     "image": "q18.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Marka gaadiid lagu baarkimo labada dhinac, albaab ayaa si lama filaan ah u furmi kara, sidaas darteed waa in la feejignaadaa."
   },
   {
     "id": 19,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 19?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 19?",
+    "questionEnglish": "What should the car driver be aware of in this situation?",
+    "questionSomali": "Maxaa darawalka gaarigu ka feejignaanayaa xaaladdan?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "The driver should slow down and be prepared to react.",
+      "Following traffic may cut the corner.",
+      "The road ahead becomes a dual carriageway.",
+      "Road marking is taking place ahead."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Darawalku waa inuu xawaaraha yareeyaa oo diyaar u noqdaa inuu falceliyo.",
+      "Gaadiidka dambe ayaa corner-ka goyn kara.",
+      "Waddada hore waxay noqonaysaa dual carriageway.",
+      "Calaamadeyn waddo ayaa ka socota hore."
     ],
     "answer": 0,
     "image": "q19.png",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Marka khatar muuqato ama xaalad aan la hubin jirto, darawalku waa inuu xawaaraha yareeyaa oo diyaar u noqdaa falcelin."
   },
   {
     "id": 20,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do in situation 20?",
-    "questionSomali": "Maxaa darawalku sameeyaa xaaladda 20?",
+    "questionEnglish": "What should a driver be aware of when driving at night along a shopping street with many different light sources?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka uu habeenkii ku wado shopping street leh nalal badan?",
     "optionsEnglish": [
-      "Correct safe action",
-      "Unsafe action 1",
-      "Unsafe action 2",
-      "Unsafe action 3"
+      "Traffic lights may be difficult to distinguish from other bright lights.",
+      "Parking spaces may be difficult to notice.",
+      "It is easier to see pedestrians because of the bright lights.",
+      "Other vehicles do not need to use headlights."
     ],
     "optionsSomali": [
-      "Falka saxda ah",
-      "Fal khaldan 1",
-      "Fal khaldan 2",
-      "Fal khaldan 3"
+      "Nalalka taraafikada way adkaan kartaa in laga sooco nalalka kale ee dhalaalaya.",
+      "Meelaha baarkinka way adkaan kartaa in la arko.",
+      "Way fududahay in la arko dadka lugaynaya sababtoo ah nalalka badan.",
+      "Gaadiidka kale uma baahna inay isticmaalaan nalalka hore."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Darawalku waa inuu si badbaado leh u dhaqmaa."
+    "explanationSomali": "Nalal badan oo kala duwan waxay adkeyn karaan in si cad loo garto nalalka taraafikada, sidaas darteed waa in feejignaan la yeeshaa."
   }
 ]
