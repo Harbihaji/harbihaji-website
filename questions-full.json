@@ -6,207 +6,417 @@
     "questionSomali": "Maxay khatar u noqon kartaa in lagu wado waddo iftiinkeedu liito?",
     "optionsEnglish": [
       "Pedestrians crossing in a dark area might be difficult to see.",
-      "Drivers can only see traffic in front of them.",
-      "Traffic lights may stop working.",
-      "Road signs disappear at night."
+      "Drivers can only see the traffic in front of them.",
+      "Drivers can only see traffic coming against them.",
+      "The road surface will always be slippery."
     ],
     "optionsSomali": [
-      "Dadka lugaynaya ee meel mugdi ah maraya way adkaan kartaa in la arko.",
+      "Dadka lugaynaya ee meel mugdi ah ka gudbaya way adkaan kartaa in la arko.",
       "Darawalku wuxuu arki karaa oo keliya gaadiidka hortiisa yaal.",
-      "Nalalka taraafikadu way dami karaan.",
-      "Calaamadaha waddadu habeenkii way baaba'aan."
+      "Darawalku wuxuu arki karaa oo keliya gaadiidka ka imanaya dhanka kale.",
+      "Waddadu mar walba way simbiriirixanaysaa."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Waddo iftiin yari ka jiro waxay adkeyn kartaa in la arko dadka lugaynaya."
+    "explanationSomali": "Waddo iftiinkeedu liito waxay adkeyn kartaa in la arko dadka lugaynaya, sidaas darteed waa in si taxaddar leh loo wado."
   },
   {
     "id": 2,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do if dazzled by headlights?",
-    "questionSomali": "Muxuu sameeyaa darawalku haddii nalalka gaari kale indhaha qabtaan?",
+    "questionEnglish": "Why might it be dangerous to drive on a poorly-lit street?",
+    "questionSomali": "Maxay khatar u noqon kartaa in lagu wado waddo iftiinkeedu liito?",
     "optionsEnglish": [
-      "Look towards the left side of the road and slow down.",
-      "Close your eyes briefly.",
-      "Flash full lights back.",
-      "Speed up quickly."
+      "It may be difficult to see poorly lit vehicles in dark areas.",
+      "Traffic lights will not be working.",
+      "Drivers can only see the traffic in front of them.",
+      "Drivers can only see traffic coming against them."
     ],
     "optionsSomali": [
-      "Eeg dhinaca bidix ee waddada oo xawaaraha yaree.",
-      "Indhaha xir muddo gaaban.",
-      "Nalal dhaadheer ku celi.",
-      "Si degdeg ah u dedeji."
+      "Way adkaan kartaa in la arko gaadiid aan si fiican u iftiimin oo ku jira meel mugdi ah.",
+      "Nalalka taraafikadu ma shaqayn doonaan.",
+      "Darawalku wuxuu arki karaa oo keliya gaadiidka hortiisa yaal.",
+      "Darawalku wuxuu arki karaa oo keliya gaadiidka ka imanaya dhanka kale."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Waa in darawalku eegaa dhinaca waddada oo si taxaddar leh u socdaa."
+    "explanationSomali": "Gaadiid aan nalal fiican lahayn ayaa ku adkaan kara in la arko habeenkii ama meelaha mugdiga ah."
   },
   {
     "id": 3,
     "category": "CAT04",
-    "questionEnglish": "When should indicators be used?",
-    "questionSomali": "Goorma ayaa indicators-ka la isticmaalaa?",
+    "questionEnglish": "What should a driver do if dazzled by the lights of an oncoming vehicle?",
+    "questionSomali": "Maxaa la sameeyaa haddii nalalka gaari kaa soo horjeeda ay indhaha kaa qabtaan?",
     "optionsEnglish": [
-      "In good time before turning or changing direction.",
-      "Only at night.",
-      "Only in heavy traffic.",
-      "After turning."
+      "Look to the left-hand edge of the road and slow down if necessary.",
+      "Accelerate to get out of the light quickly.",
+      "Flash the oncoming vehicle and move left.",
+      "Close your eyes briefly until the vehicle passes."
     ],
     "optionsSomali": [
-      "Waqti fiican kahor leexashada ama jihada beddelka.",
-      "Kaliya habeenkii.",
-      "Kaliya taraafikada badan.",
-      "Kadib marka la leexdo."
+      "Eeg dhinaca bidix ee waddada oo xawaaraha yaree haddii loo baahdo.",
+      "Xawaaraha kordhi si aad si degdeg ah uga baxdo nalka.",
+      "Nalalka u shid gaariga kaa soo horjeeda oo bidix u leexo.",
+      "Indhaha xir muddo gaaban ilaa gaarigu dhaafo."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Indicators-ku waxay dadka kale tusaan waxa aad damacsan tahay."
+    "explanationSomali": "Haddii nalalka kaa indho tiraan, eeg dhinaca bidix ee waddada oo si tartiib ah u soco si aad u ilaaliso xakamaynta."
   },
   {
     "id": 4,
     "category": "CAT04",
-    "questionEnglish": "Why is it dangerous to drive while tired?",
-    "questionSomali": "Maxay khatar u tahay wadista iyadoo daalan?",
+    "questionEnglish": "When should signals be given to other road users?",
+    "questionSomali": "Goorma ayaa calaamadaha sida indicators-ka loo siinayaa dadka kale ee waddada isticmaala?",
     "optionsEnglish": [
-      "Reaction time and awareness are reduced.",
-      "Fuel is used faster.",
-      "Tyres wear quickly.",
-      "The radio may distract you."
+      "Clearly and in good time to show what you intend to do.",
+      "Only when it is necessary to warn following traffic.",
+      "Only when turning at busy junctions.",
+      "Only after you have started the manoeuvre."
     ],
     "optionsSomali": [
-      "Falcelinta iyo feejignaanta ayaa yaraata.",
-      "Shidaalka ayaa si degdeg ah ku dhammaada.",
-      "Taayirradu si dhakhso ah ayay u duugoobaan.",
-      "Raadiyaha ayaa mashquulin kara."
+      "Si cad iyo waqti fiican ah si loo muujiyo waxa aad damacsan tahay.",
+      "Kaliya marka loo baahan yahay in la digo gaadiidka kaa dambeeya.",
+      "Kaliya markaad ka leexanayso isgoysyo mashquul ah.",
+      "Kaliya kadib markaad bilowdo dhaqaaqa."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Daalka wuxuu si weyn u yareeyaa awoodda wadista badbaadada leh."
+    "explanationSomali": "Calaamadaha waa in la bixiyo si cad oo waqti fiican ah si dadka kale u fahmaan waxa aad samaynayso."
   },
   {
     "id": 5,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do before taking medication?",
-    "questionSomali": "Muxuu sameeyaa darawalku kahor qaadashada daawo?",
+    "questionEnglish": "Is a driver permitted to pick up or set down a passenger on a motorway?",
+    "questionSomali": "Ma loo oggol yahay darawal inuu rakaab ka qaado ama ka dejiyo motorway?",
     "optionsEnglish": [
-      "Ask a doctor or pharmacist if it affects driving.",
-      "Ignore all warnings.",
-      "Drive faster to stay alert.",
-      "Double the dosage."
+      "A driver is never permitted to pick up or set down passengers on a motorway.",
+      "It is permitted if the driver stops on the hard shoulder.",
+      "It is only permitted within 200 metres of a slip road.",
+      "It is permitted during daylight hours only."
     ],
     "optionsSomali": [
-      "Weydii dhakhtar ama farmashiiste haddii ay saameyn ku leedahay wadista.",
-      "Digniinaha iska indhatir.",
-      "Si degdeg ah u wad si aad u feejignaato.",
-      "Qiyaasta labanlaab."
+      "Darawal looma oggola inuu rakaab ka qaado ama ka dejiyo motorway.",
+      "Waa la oggol yahay haddii uu ku istaago hard shoulder-ka.",
+      "Waa la oggol yahay oo keliya meel 200 mitir u jirta slip road.",
+      "Waa la oggol yahay oo keliya maalintii."
     ],
     "answer": 0,
     "image": "",
-    "explanationSomali": "Daawooyinka qaar waxay saameyn karaan awoodda wadista."
+    "explanationSomali": "Motorway-ga looma isticmaalo qaadista ama dejinta rakaabka, sababtoo ah waa khatar aad u weyn."
   },
   {
     "id": 6,
     "category": "CAT04",
-    "questionEnglish": "What should a driver be prepared for in this situation?",
-    "questionSomali": "Muxuu darawalku uga diyaar garoobayaa xaaladdan?",
+    "questionEnglish": "An approaching driver sees a boy on a bicycle saying goodbye to his friend. What should the driver do?",
+    "questionSomali": "Darawal soo dhowaanaya wuxuu arkay wiil baaskiil wata oo saaxiibkii macsalaamaynaya. Maxaa la sameeyaa?",
     "optionsEnglish": [
-      "The child on the bicycle may move suddenly.",
-      "The road may close immediately.",
-      "A vehicle may reverse quickly.",
-      "The cyclist will always stop."
+      "Be prepared for the boy to move off at any moment.",
+      "Slow down and beckon the boy to cross the road.",
+      "Stop until the boy has moved off.",
+      "Proceed normally because the boy is on the footpath."
     ],
     "optionsSomali": [
-      "Ilmaha baaskiilka wata ayaa si lama filaan ah u dhaqaaqi kara.",
-      "Waddadu si degdeg ah ayay u xirmi kartaa.",
-      "Gaari ayaa gadaal u socon kara.",
-      "Baaskiil-waduhu mar walba wuu istaagayaa."
+      "U diyaar garow in wiilku dhaqaaqo waqti kasta.",
+      "Xawaaraha yaree oo wiilka u tilmaam inuu waddada gooyo.",
+      "Istaag ilaa wiilku dhaqaaqo.",
+      "Si caadi ah u wad sababtoo ah wiilku wuxuu joogaa footpath-ka."
     ],
     "answer": 0,
     "image": "q6.png",
-    "explanationSomali": "Carruurtu si lama filaan ah ayay u dhaqaaqi karaan."
+    "explanationSomali": "Carruurta si lama filaan ah ayay u dhaqaaqi karaan, sidaas darteed darawalku waa inuu diyaar u ahaadaa inuu joojiyo."
   },
   {
     "id": 7,
     "category": "CAT04",
-    "questionEnglish": "What danger is shown in this situation?",
-    "questionSomali": "Khatar noocee ah ayaa muuqata xaaladdan?",
+    "questionEnglish": "What must a driver be prepared for when children are playing near a ball on the road?",
+    "questionSomali": "Maxaa darawalku u diyaar garoobayaa marka carruur ay kubbad ku ciyaarayaan agagaarka waddada?",
     "optionsEnglish": [
-      "A child may run after the ball.",
-      "The road is closed.",
-      "The vehicle ahead may stop permanently.",
-      "Traffic lights are broken."
+      "A child could turn back to collect the ball from the roadway.",
+      "The ball may burst after the vehicle passes.",
+      "The oncoming vehicle may swerve in your direction.",
+      "The ball could damage your vehicle."
     ],
     "optionsSomali": [
-      "Ilmo ayaa kubbadda daba ordi kara.",
-      "Waddadu way xiran tahay.",
-      "Gaadhiga hore ayaa joogsan kara si joogto ah.",
-      "Nalalka taraafikadu way jaban yihiin."
+      "Ilmo ayaa dib ugu noqon kara inuu kubbadda ka soo qaato waddada.",
+      "Kubbaddu way qarxi kartaa kadib marka gaarigu dhaafo.",
+      "Gaariga kaa soo horjeeda ayaa dhinacaaga u leexan kara.",
+      "Kubbaddu waxay dhaawici kartaa gaarigaaga."
     ],
     "answer": 0,
     "image": "q7.png",
-    "explanationSomali": "Carruurtu waxay si lama filaan ah ugu ordi karaan waddada."
+    "explanationSomali": "Carruurtu waxay si lama filaan ah ugu ordi karaan waddada si ay kubbad u soo qaataan, sidaas darteed waa in si taxaddar leh loo wado."
   },
   {
     "id": 8,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do near a pedestrian crossing?",
-    "questionSomali": "Muxuu sameeyaa darawalku marka uu ku dhow yahay pedestrian crossing?",
+    "questionEnglish": "When approaching a pedestrian crossing, what should the driver do?",
+    "questionSomali": "Marka darawalku ku dhow yahay pedestrian crossing, maxaa la sameeyaa?",
     "optionsEnglish": [
-      "Slow down and prepare to stop.",
-      "Speed up before pedestrians cross.",
-      "Ignore waiting pedestrians.",
-      "Use the horn continuously."
+      "Slow down in good time and be prepared to stop.",
+      "Maintain speed because pedestrians have not stepped onto the crossing.",
+      "Continue quickly because pedestrians must wait.",
+      "Sound the horn to warn pedestrians to stay back."
     ],
     "optionsSomali": [
-      "Xawaaraha yaree oo diyaar u noqo inaad istaagto.",
-      "Dedeji kahor dadka lugaynaya.",
-      "Iska indhatir dadka sugaya.",
-      "Horn-ka si joogto ah u isticmaal."
+      "Xawaaraha waqti fiican ku yaree oo diyaar u noqo inaad istaagto.",
+      "Xawaaraha sii wad sababtoo ah dadka lugaynaya weli ma aysan gelin crossing-ka.",
+      "Si degdeg ah u sii wad sababtoo ah dadka lugaynaya waa inay sugaan.",
+      "Horn-ka isticmaal si aad dadka lugaynaya uga digto inay dib u joogaan."
     ],
     "answer": 0,
     "image": "q8.png",
-    "explanationSomali": "Waa in darawalku mar walba diyaar u noqdaa inuu istaago."
+    "explanationSomali": "Markaad u dhowdahay pedestrian crossing, waa inaad xawaaraha yareysaa oo diyaar u noqotaa inaad istaagto."
   },
   {
     "id": 9,
     "category": "CAT04",
-    "questionEnglish": "What should a driver do when children are near the road?",
-    "questionSomali": "Muxuu sameeyaa darawalku marka carruur ku dhow yihiin waddada?",
+    "questionEnglish": "What should the driver do if there are children playing at the edge of the road?",
+    "questionSomali": "Maxaa darawalku sameeyaa haddii carruur ku ciyaarayaan geeska waddada?",
     "optionsEnglish": [
-      "Reduce speed and stay alert.",
-      "Drive normally.",
-      "Use full headlights.",
-      "Accelerate quickly."
+      "Reduce speed, drive cautiously and remain ready to brake.",
+      "Give a warning signal and drive past at the same speed.",
+      "Accelerate and move to the right-hand side of the road.",
+      "Drive closer to the kerb to pass them quickly."
     ],
     "optionsSomali": [
-      "Xawaaraha yaree oo feejignow.",
-      "Si caadi ah u wad.",
-      "Nalalka dhaadheer isticmaal.",
-      "Si degdeg ah u dedeji."
+      "Xawaaraha yaree, si taxaddar leh u wad, oo diyaar u noqo inaad biriig qabato.",
+      "Calaamad digniin ah bixi oo isla xawaaraha ku dhaaf.",
+      "Xawaaraha kordhi oo u dhaqaaq dhinaca midig ee waddada.",
+      "Ku dhowow kerb-ka si aad si degdeg ah u dhaafto."
     ],
     "answer": 0,
     "image": "q9.png",
-    "explanationSomali": "Carruurtu si lama filaan ah ayay waddada ugu soo bixi karaan."
+    "explanationSomali": "Carruurtu si lama filaan ah ayay u geli karaan waddada, sidaas darteed waa in si tartiib ah oo feejignaan leh loo wado."
   },
   {
     "id": 10,
     "category": "CAT04",
-    "questionEnglish": "What should a driver watch for when passing a stopped bus?",
-    "questionSomali": "Muxuu darawalku ka taxaddaraa marka uu dhaafayo bas istaagay?",
+    "questionEnglish": "What should a driver be conscious of when passing a stopped bus?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka uu dhaafayo bas istaagay?",
     "optionsEnglish": [
-      "Pedestrians crossing behind the bus.",
-      "The bus reversing quickly.",
-      "Traffic lights changing.",
-      "Animals crossing."
+      "People may cross the street at the rear of the bus.",
+      "Traffic may only emerge from the street on the left.",
+      "The bus may start to reverse.",
+      "The bus driver will always signal before moving off."
     ],
     "optionsSomali": [
-      "Dad ka gudbaya gadaasha baska.",
-      "Baska oo gadaal si degdeg ah u socda.",
-      "Nalalka taraafikada oo is beddelaya.",
-      "Xayawaan gudbaya."
+      "Dad ayaa laga yaabaa inay waddada ka gooyaan gadaasha baska.",
+      "Gaadiidku wuxuu ka imaan karaa oo keliya waddada bidixda.",
+      "Basku wuxuu bilaabi karaa inuu gadaal u socdo.",
+      "Darawalka baska mar walba wuu calaamadayn doonaa ka hor dhaqaaq."
     ],
     "answer": 0,
     "image": "q10.png",
-    "explanationSomali": "Dad ayaa si lama filaan ah uga soo bixi kara gadaasha baska."
+    "explanationSomali": "Dadku waxay si lama filaan ah uga soo bixi karaan gadaasha baska, sidaas darteed waa in la feejignaado."
+  },
+  {
+    "id": 11,
+    "category": "CAT04",
+    "questionEnglish": "A silver car is overtaking a parked red car. What should the driver do?",
+    "questionSomali": "Gaariga silver-ka ah wuxuu dhaafayaa gaari cas oo taagan. Maxaa darawalku sameeyaa?",
+    "optionsEnglish": [
+      "Reduce speed considerably and be ready to stop.",
+      "Drive on at the same speed.",
+      "Drive on if you do not hit the ball.",
+      "Move closer to the parked red car."
+    ],
+    "optionsSomali": [
+      "Xawaaraha si weyn u yaree oo diyaar u noqo inaad istaagto.",
+      "Isla xawaaraha ku sii wad.",
+      "Sii wad haddii aadan kubbadda ku dhicin.",
+      "U dhowow gaariga cas ee taagan."
+    ],
+    "answer": 0,
+    "image": "q11.png",
+    "explanationSomali": "Marka xaaladdu cidhiidhi tahay ama carruur/kubbad la arko, waa in xawaaraha si weyn loo yareeyaa oo diyaar loo ahaadaa istaag."
+  },
+  {
+    "id": 12,
+    "category": "CAT04",
+    "questionEnglish": "What should a driver be aware of near a pedestrian waiting on a traffic island?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka qof lugaynaya ku sugayo traffic island?",
+    "optionsEnglish": [
+      "The pedestrian may leave the traffic island without paying attention.",
+      "A tram may move away without warning.",
+      "There is no danger because the tram is on rails.",
+      "The pedestrian always has priority to cross in front of traffic."
+    ],
+    "optionsSomali": [
+      "Qofka lugaynaya wuxuu ka tagi karaa traffic island-ka isagoo aan fiirin.",
+      "Tram ayaa dhaqaaqi kara digniin la’aan.",
+      "Khatar ma jirto sababtoo ah tram-ku wuxuu ku socdaa rails.",
+      "Qofka lugaynaya mar walba mudnaan ayuu leeyahay inuu gaadiidka hortiisa ka gooyo."
+    ],
+    "answer": 0,
+    "image": "q12.png",
+    "explanationSomali": "Qofka lugaynaya mararka qaar si lama filaan ah ayuu uga bixi karaa traffic island-ka, sidaas darteed darawalku waa inuu feejignaadaa."
+  },
+  {
+    "id": 13,
+    "category": "CAT04",
+    "questionEnglish": "A driver is following two vehicles and wishes to overtake. What must the driver consider before overtaking?",
+    "questionSomali": "Darawal wuxuu raacayaa laba gaari wuxuuna doonayaa inuu dhaafo. Maxaa la tixgeliyaa ka hor dhaafidda?",
+    "optionsEnglish": [
+      "The driver’s field of view is not good enough to allow safe overtaking.",
+      "The road markings always forbid overtaking here.",
+      "The silver car may decide to turn right.",
+      "The driver should overtake both vehicles together."
+    ],
+    "optionsSomali": [
+      "Aragtida darawalka kuma filna dhaafid ammaan ah.",
+      "Calaamadaha waddadu mar walba way mamnuucayaan dhaafidda halkan.",
+      "Gaariga silver-ka ah wuxuu go’aansan karaa inuu midig u leexdo.",
+      "Darawalku waa inuu labada gaari hal mar wada dhaafo."
+    ],
+    "answer": 0,
+    "image": "q13.png",
+    "explanationSomali": "Dhaafid lama bilaabi karo haddii aragtidu aysan ku filnayn in si ammaan ah loo hubiyo waddada hore."
+  },
+  {
+    "id": 14,
+    "category": "CAT04",
+    "questionEnglish": "What should a driver be aware of when approaching a vehicle that is attempting to park?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka uu ku dhow yahay gaari isku dayaya inuu baarkimo?",
+    "optionsEnglish": [
+      "The vehicle being parked may move out without warning.",
+      "There may be a driveway where the vehicle is parking.",
+      "The vehicle may be parking in a loading area.",
+      "You may have to stop and assist the driver parking."
+    ],
+    "optionsSomali": [
+      "Gaariga la dhigayo wuxuu dhaqaaqi karaa digniin la’aan.",
+      "Waxaa jiri kara driveway meesha gaarigu dhigayo.",
+      "Gaarigu wuxuu ku baarkimi karaa goob loading ah.",
+      "Waxaa laga yaabaa inaad istaagto oo ka caawiso darawalka baarkinka."
+    ],
+    "answer": 0,
+    "image": "q14.png",
+    "explanationSomali": "Gaariga isku dayaya inuu baarkimo wuxuu si lama filaan ah u dhaqaaqi karaa, sidaas darteed waa in taxaddar la yeeshaa."
+  },
+  {
+    "id": 15,
+    "category": "CAT04",
+    "questionEnglish": "What should the driver be most conscious of in this situation?",
+    "questionSomali": "Maxaa darawalku ugu badan ka feejignaanayaa xaaladdan?",
+    "optionsEnglish": [
+      "The pedestrian may suddenly cross the road in front of the vehicle.",
+      "The pedestrian always has right of way to cross the road.",
+      "No vehicles should be parked on the left-hand side of the road.",
+      "One of the parked vehicles may reverse into the driver’s path."
+    ],
+    "optionsSomali": [
+      "Qofka lugaynaya wuxuu si lama filaan ah ugu gudbi karaa gaariga hortiisa.",
+      "Qofka lugaynaya mar walba xaq ayuu u leeyahay inuu waddada gooyo.",
+      "Gaadiid looma oggola inuu dhigo dhinaca bidix ee waddada.",
+      "Mid ka mid ah gaadiidka taagan ayaa gadaal ugu soo noqon kara jidka darawalka."
+    ],
+    "answer": 0,
+    "image": "q15.png",
+    "explanationSomali": "Dadku si lama filaan ah ayay u goyn karaan waddada, sidaas darteed darawalku waa inuu xawaaraha yareeyaa oo feejignaadaa."
+  },
+  {
+    "id": 16,
+    "category": "CAT04",
+    "questionEnglish": "What should a driver do when travelling behind this vehicle?",
+    "questionSomali": "Maxaa darawalku sameeyaa marka uu ka dambeeyo gaarigan?",
+    "optionsEnglish": [
+      "Reduce speed and prepare to stop if necessary.",
+      "Overtake the vehicle in front.",
+      "Drive as close as possible to the vehicle.",
+      "Pass slowly by mounting the kerb on the left."
+    ],
+    "optionsSomali": [
+      "Xawaaraha yaree oo diyaar u noqo inaad istaagto haddii loo baahdo.",
+      "Dhaaf gaariga kaa horreeya.",
+      "U dhowow gaariga sida ugu badan ee suurtagal ah.",
+      "Si tartiib ah uga dhaaf adigoo kerb-ka bidix fuulaya."
+    ],
+    "answer": 0,
+    "image": "q16.png",
+    "explanationSomali": "Markaad ka dambeyso gaari kale, gaar ahaan mid kaa xannibaya aragtida, waa inaad xawaaraha yareysaa oo diyaar u ahaataa istaag."
+  },
+  {
+    "id": 17,
+    "category": "CAT04",
+    "questionEnglish": "What should a driver be aware of when passing a bus?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka uu dhaafayo bas?",
+    "optionsEnglish": [
+      "There may be a car hidden from view in front of the bus.",
+      "The bus may be parked at a terminus.",
+      "Only buses may use this road.",
+      "The bus will always remain stationary."
+    ],
+    "optionsSomali": [
+      "Waxaa jiri kara gaari ka qarsoon aragtida oo baska hortiisa yaal.",
+      "Basku wuxuu ku baarkimi karaa terminus.",
+      "Baska oo keliya ayaa isticmaali kara waddadan.",
+      "Basku mar walba wuu taagnaan doonaa."
+    ],
+    "answer": 0,
+    "image": "q17.png",
+    "explanationSomali": "Baska weyn wuxuu qarin karaa gaari ama qof kale, sidaas darteed darawalku waa inuu feejignaadaa."
+  },
+  {
+    "id": 18,
+    "category": "CAT04",
+    "questionEnglish": "When driving on a one-way street with vehicles parked on both sides, what should a driver be prepared for?",
+    "questionSomali": "Markaad ku wadayso waddo one-way ah oo gaadiid ka yaallaan labada dhinac, maxaad u diyaar garoobaysaa?",
+    "optionsEnglish": [
+      "A vehicle door may open on either side of the street.",
+      "Oncoming traffic may appear as you overtake the truck.",
+      "The truck may be a left-hand drive vehicle.",
+      "The road will always become wider ahead."
+    ],
+    "optionsSomali": [
+      "Albaab gaari ayaa ka furmi kara dhinac kasta oo waddada ah.",
+      "Gaadiid kaa soo horjeeda ayaa muuqan kara markaad truck-ga dhaafayso.",
+      "Truck-gu wuxuu noqon karaa left-hand drive.",
+      "Waddadu mar walba way ballaaran doontaa hore."
+    ],
+    "answer": 0,
+    "image": "q18.png",
+    "explanationSomali": "Marka gaadiid lagu baarkimo labada dhinac, albaab ayaa si lama filaan ah u furmi kara, sidaas darteed waa in la feejignaadaa."
+  },
+  {
+    "id": 19,
+    "category": "CAT04",
+    "questionEnglish": "What should the car driver be aware of in this situation?",
+    "questionSomali": "Maxaa darawalka gaarigu ka feejignaanayaa xaaladdan?",
+    "optionsEnglish": [
+      "The driver should slow down and be prepared to react.",
+      "Following traffic may cut the corner.",
+      "The road ahead becomes a dual carriageway.",
+      "Road marking is taking place ahead."
+    ],
+    "optionsSomali": [
+      "Darawalku waa inuu xawaaraha yareeyaa oo diyaar u noqdaa inuu falceliyo.",
+      "Gaadiidka dambe ayaa corner-ka goyn kara.",
+      "Waddada hore waxay noqonaysaa dual carriageway.",
+      "Calaamadeyn waddo ayaa ka socota hore."
+    ],
+    "answer": 0,
+    "image": "q19.png",
+    "explanationSomali": "Marka khatar muuqato ama xaalad aan la hubin jirto, darawalku waa inuu xawaaraha yareeyaa oo diyaar u noqdaa falcelin."
+  },
+  {
+    "id": 20,
+    "category": "CAT04",
+    "questionEnglish": "What should a driver be aware of when driving at night along a shopping street with many different light sources?",
+    "questionSomali": "Maxaa darawalku ka feejignaanayaa marka uu habeenkii ku wado shopping street leh nalal badan?",
+    "optionsEnglish": [
+      "Traffic lights may be difficult to distinguish from other bright lights.",
+      "Parking spaces may be difficult to notice.",
+      "It is easier to see pedestrians because of the bright lights.",
+      "Other vehicles do not need to use headlights."
+    ],
+    "optionsSomali": [
+      "Nalalka taraafikada way adkaan kartaa in laga sooco nalalka kale ee dhalaalaya.",
+      "Meelaha baarkinka way adkaan kartaa in la arko.",
+      "Way fududahay in la arko dadka lugaynaya sababtoo ah nalalka badan.",
+      "Gaadiidka kale uma baahna inay isticmaalaan nalalka hore."
+    ],
+    "answer": 0,
+    "image": "",
+    "explanationSomali": "Nalal badan oo kala duwan waxay adkeyn karaan in si cad loo garto nalalka taraafikada, sidaas darteed waa in feejignaan la yeeshaa."
   }
 ]
